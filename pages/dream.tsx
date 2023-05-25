@@ -124,7 +124,10 @@ const Home: NextPage = () => {
   }, [router.query.success]);
 
   return (
-    <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div
+      className="flex max-w-6xl mx-auto flex-col items-center justify-center min-h-screen"
+      style={{ background: '#F5F0EA', color: '#4C3D30' }}
+    >
       <Head>
         <title>RoomGPT</title>
       </Head>
@@ -132,7 +135,7 @@ const Home: NextPage = () => {
         photo={session?.user?.image || undefined}
         email={session?.user?.email || undefined}
       />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
+      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mb-0">
         {status === "authenticated" ? (
           <Link
             href="/buy-credits"
@@ -142,20 +145,12 @@ const Home: NextPage = () => {
             <span className="font-semibold text-gray-200">Click here</span> to
             buy credits!
           </Link>
-        ) : (
-          <a
-            href="https://twitter.com/nutlope/status/1635674124738523139?cxt=HHwWhsCz1ei8irMtAAAA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-400 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 transition"
-          >
-            Over{" "}
-            <span className="font-semibold text-gray-200">1 million users</span>{" "}
-            have used roomGPT so far
-          </a>
-        )}
-        <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-100 sm:text-6xl mb-5">
-          Generate your <span className="text-blue-600">dream</span> room
+        ) : null}
+        <h1
+          className="mx-auto max-w-4xl font-display text-4xl font-bold sm:text-6xl mb-5"
+          style={{ fontFamily: 'Dallas' }}
+        >
+          REDESIGN YOUR ROOM<br/> IN A SNAP
         </h1>
         {status === "authenticated" && data && !restoredImage && (
           <p className="text-gray-400">
@@ -179,7 +174,7 @@ const Home: NextPage = () => {
             )}
           </p>
         )}
-        <ResizablePanel>
+        <ResizablePanel status={status}>
           <AnimatePresence mode="wait">
             <motion.div className="flex justify-between items-center w-full flex-col mt-4">
               {restoredImage && (
@@ -276,23 +271,53 @@ const Home: NextPage = () => {
               ) : (
                 !originalPhoto && (
                   <div className="h-[250px] flex flex-col items-center space-y-6 max-w-[670px] -mt-8">
-                    <div className="max-w-xl text-gray-300">
-                      Sign in below with Google to create a free account and
-                      redesign your room today. You will get 3 generations for
-                      free.
+                    <div className="max-w-xl font-bold" style={{ fontFamily: 'Arimo' }}>
+                      <p>
+                        SIGN IN BELOW TO CREATE A FREE ACCOUNT &<br/>
+                        REDESIGN YOUR ROOM TODAY
+                      </p>
+                      <p className="mt-3">
+                        YOU WILL GET 3 DESIGNS FOR FREE
+                      </p>
                     </div>
-                    <button
-                      onClick={() => signIn("google")}
-                      className="bg-gray-200 text-black font-semibold py-3 px-6 rounded-2xl flex items-center space-x-2"
-                    >
-                      <Image
-                        src="/google.png"
-                        width={20}
-                        height={20}
-                        alt="google's logo"
-                      />
-                      <span>Sign in with Google</span>
-                    </button>
+                    <div className="flex flex-col space-y-2">
+                      <button
+                        onClick={() => signIn("google")}
+                        className="bg-gray-200 font-semibold py-3 px-6 rounded-xl flex items-center space-x-2"
+                      >
+                        <Image
+                          src="/facebook.png"
+                          width={20}
+                          height={20}
+                          alt="facebook's logo"
+                        />
+                        <span>Sign in with Facebook</span>
+                      </button>
+                      <button
+                        onClick={() => signIn("google")}
+                        className="bg-gray-200 font-semibold py-3 px-6 rounded-xl flex items-center space-x-2"
+                      >
+                        <Image
+                          src="/google.png"
+                          width={20}
+                          height={20}
+                          alt="google's logo"
+                        />
+                        <span>Sign in with Google</span>
+                      </button>
+                      <button
+                        onClick={() => signIn("google")}
+                        className="bg-gray-200 font-semibold py-3 px-6 rounded-xl flex items-center space-x-2"
+                      >
+                        <Image
+                          src="/apple.png"
+                          width={24}
+                          height={24}
+                          alt="apple's logo"
+                        />
+                        <span>Sign in with Apple</span>
+                      </button>
+                    </div>
                   </div>
                 )
               )}

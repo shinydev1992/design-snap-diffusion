@@ -9,17 +9,23 @@ export default function Header({
   email?: string;
 }) {
   return (
-    <header className="flex flex-col xs:flex-row justify-between items-center w-full mt-3 border-b pb-7 sm:px-4 px-2 border-gray-500 gap-2">
+    <header
+      className="flex justify-between h-[72px] items-center w-full sm:px-4 px-2 border-gray-500"
+      style={{ background: '#4C3D30' }}
+    >
       <Link href="/dream" className="flex space-x-2">
         <Image
           alt="header text"
-          src="/bed.svg"
-          className="sm:w-10 sm:h-10 w-9 h-9"
+          src="/logo.png"
+          // className="sm:w-10 sm:h-10 w-9 h-9"
           width={24}
           height={24}
         />
-        <h1 className="sm:text-3xl text-xl font-bold ml-2 tracking-tight">
-          roomGPT.io
+        <h1
+          className="flex items-center text-xl ml-2"
+          style={{ color: '#CDC0B2', fontFamily: 'inherit', lineHeight: '1.2rem' }}
+        >
+          DESIGN<br/>SNAP
         </h1>
       </Link>
       {email ? (
@@ -53,10 +59,11 @@ export default function Header({
         </div>
       ) : (
         <Link
-          className="flex max-w-fit items-center justify-center space-x-2 rounded-lg border border-blue-600 text-white px-5 py-2 text-sm shadow-md hover:bg-blue-400 bg-blue-600 font-medium transition"
+          className="flex items-center justify-center space-x-2 rounded-3xl text-white px-5 py-2 text-sm shadow-md font-medium transition"
+          style={{ background: '#CDC0B2', color: '#4C3D30' }}
           href="/dream"
         >
-          <p>Sign Up </p>
+          <p style={{ fontFamily: 'Arimo', fontWeight: 'bold' }}>LOGIN</p>
         </Link>
       )}
     </header>

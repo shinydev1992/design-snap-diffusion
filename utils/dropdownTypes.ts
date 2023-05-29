@@ -3,7 +3,6 @@ export type themeType =
   | "Vintage"
   | "Minimalist"
   | "Professional"
-  | "Tropical"
   | "Industrial"
   | "Neoclassic";
 
@@ -22,7 +21,6 @@ export const themes: themeType[] = [
   "Modern",
   "Minimalist",
   "Professional",
-  "Tropical",
   "Vintage",
   "Industrial",
   "Neoclassic",

@@ -6,63 +6,53 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SquigglyLines from "../components/SquigglyLines";
 import { Testimonials } from "../components/Testimonials";
+import { useSession } from "next-auth/react";
 
 const Home: NextPage = () => {
+  const { data: session, status } = useSession();
+
   return (
-    <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="flex mx-auto flex-col items-center justify-center min-h-screen">
       <Head>
-        <title>RoomGPT</title>
+        <title>Design Snap</title>
       </Head>
 
-      <Header />
+      <Header
+        photo={session?.user?.image || undefined}
+        email={session?.user?.email || undefined}
+      />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20 background-gradient">
-        <a
-          href="https://vercel.fyi/roomGPT"
-          target="_blank"
-          rel="noreferrer"
-          className="border border-gray-700 rounded-lg py-2 px-4 text-gray-400 text-sm mb-5 transition duration-300 ease-in-out hover:text-gray-300"
+        <h1
+          className="mx-auto max-w-4xl font-display text-4xl sm:text-6xl font-bold font-[Arimo] leading-[1]"
         >
-          Clone and deploy your own with{" "}
-          <span className="text-blue-600">Vercel</span>
-        </a>
-        <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
-          Generating dream rooms{" "}
-          <span className="relative whitespace-nowrap text-blue-600">
-            <SquigglyLines />
-            <span className="relative">using AI</span>
-          </span>{" "}
-          for everyone.
+          REDESIGN ROOMS<br/> IN SECONDS
         </h1>
-        <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-gray-400  text-gray-500 leading-7">
-          Take a picture of your room and see how your room looks in different
-          themes. Remodel your room today.
+        <h2 className="mx-auto mt-4 sm:max-w-4xl max-w-xl sm:text-lg text-[#4C3D30] leading-1 font-[Arimo]">
+          Take a picture of a room & instantly re-design it.<br/>
+          Design Snap the perfect inspiration for your next room
         </h2>
         <Link
-          className="bg-blue-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
+          className="bg-[#AE6A2B] rounded-full text-[#F5F0EA] px-8 py-3 sm:mt-10 mt-8 font-[Arimo] font-bold"
           href="/dream"
         >
-          Generate your dream room
+          REDESIGN YOUR ROOM
         </Link>
         <div className="flex justify-between items-center w-full flex-col sm:mt-10 mt-6">
-          <div className="flex flex-col space-y-10 mt-4 mb-16">
+          <div className="flex flex-col space-y-10 mt-4 mb-4">
             <div className="flex sm:space-x-8 sm:flex-row flex-col">
               <div>
-                <h3 className="mb-1 font-medium text-lg">Original Room</h3>
-                <Image
+                <h3 className="mb-2 font-medium text-lg font-[Arimo]">Original Room</h3>
+                <img
                   alt="Original photo of a room"
-                  src="/1.jpg"
+                  src="/original_room.png"
                   className="w-full object-cover h-96 rounded-2xl"
-                  width={400}
-                  height={400}
                 />
               </div>
               <div className="sm:mt-0 mt-8">
-                <h3 className="mb-1 font-medium text-lg">Generated Room</h3>
-                <Image
+                <h3 className="mb-2 font-medium text-lg font-[Arimo]">Generated Room</h3>
+                <img
                   alt="Generated photo of a room with roomGPT.io"
-                  width={400}
-                  height={400}
-                  src="/1-new.jpg"
+                  src="/generated_room.png"
                   className="w-full object-cover h-96 rounded-2xl sm:mt-0 mt-2"
                 />
               </div>
@@ -71,6 +61,120 @@ const Home: NextPage = () => {
         </div>
       </main>
       <Testimonials />
+      <section className="py-10 max-w-7xl">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
+          <div className="mx-auto">
+            <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-[#4C3D30] sm:text-6xl leading-[1]">
+              BESPOKE DESIGNS<br/> MADE FROM A.I
+            </h1>
+          </div>
+          <div
+            role="list"
+            className="mx-auto mt-8 grid max-w-2xl grid-cols-2 gap-8 lg:gap-20 lg:mt-16 sm:max-w-none lg:grid-cols-4"
+          >
+            <div
+              className="hover:scale-105 transition duration-300 ease-in-out "
+            >
+              <Image
+                src="/happy_customers.png"
+                width={192}
+                height={192}
+                alt="1 icon"
+              />
+            </div>
+            <div
+              className="hover:scale-105 transition duration-300 ease-in-out "
+            >
+              <Image
+                src="/redesign_time.png"
+                width={192}
+                height={192}
+                alt="1 icon"
+              />
+            </div>
+            <div
+              className="hover:scale-105 transition duration-300 ease-in-out "
+            >
+              <Image
+                src="/renovator.png"
+                width={192}
+                height={192}
+                alt="1 icon"
+              />
+            </div>
+            <div
+              className="hover:scale-105 transition duration-300 ease-in-out "
+            >
+              <Image
+                src="/6_styles.png"
+                width={192}
+                height={192}
+                alt="1 icon"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-4 max-w-7xl">
+        <div className="mx-auto  px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
+          <div className="mx-auto">
+            <h1 className="mx-auto max-w-4xl font-display text-xl font-bold tracking-normal text-[#545E56] sm:text-2xl mb-2">
+              3 EASY STEPS TO
+            </h1>
+            <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl">
+              REDESIGN YOUR SPACE
+            </h1>
+          </div>
+        </div>
+        <div className="mx-auto flex justify-center overflow-hidden relative sm:mt-12 mt-4 ">
+          <img
+            src="/phone.png"
+            className="h-auto w-full"
+            alt="1 icon"
+          />
+          <div className="absolute bottom-0 bg-[#AE6A2B] rounded-[32px] text-[#F5F0EA] sm:px-10 px-8 py-4 sm:mt-10 mt-4 font-[Arimo] font-bold text-sm sm:text-xl">
+            <Link
+              href="/dream"
+            >
+              DESIGN YOURS NOW
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="py-4 sm:py-12 max-w-7xl">
+        <div className="mx-auto  px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
+          <div className="mx-auto">
+            <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl">
+              #DESIGN SNAP
+            </h1>
+          </div>
+        </div>
+        <div
+          role="list"
+          className="mx-auto mt-8 grid w-full grid-cols-2 lg:mt-16 sm:max-w-none lg:grid-cols-4"
+        >
+          <img
+            src="/1.png"
+            className="h-full w-auto"
+            alt="1 icon"
+          />
+          <img
+            src="/2.png"
+            className="h-full w-auto"
+            alt="1 icon"
+          />
+          <img
+            src="/3.png"
+            className="h-full w-auto"
+            alt="1 icon"
+          />
+          <img
+            src="/4.png"
+            className="h-full w-auto"
+            alt="1 icon"
+          />
+        </div>
+      </section>
       <Footer />
     </div>
   );

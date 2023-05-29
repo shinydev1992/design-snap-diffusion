@@ -2,14 +2,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="h-16 sm:h-20 w-full flex sm:flex-row flex-col items-center px-3 sm:mb-0 mb-3 border-gray-500 relative">
+    <footer className="w-full h-[72px] flex flex-col sm:flex-row justify-center items-center relative mt-4">
       <div
-        className="font-semibold flex-1 flex justify-center" 
-        style={{ color: '#4C3D30', fontFamily: 'Arimo' }}
+        className="font-semibold flex color-[#4C3D30] font-[Arimo] uppercase" 
       >
         <p>Powered by THEDESIGNSNAP</p>
       </div>
-      <div className="flex space-x-1 absolute right-4">
+      <div className="flex space-x-1 static sm:absolute right-4">
         <Link
           href=""
           className="group"
@@ -18,7 +17,7 @@ export default function Footer() {
           <svg
             aria-hidden="true"
             fill="currentColor"
-            className="h-4 w-4"
+            className="h-5 w-5"
             viewBox="0 0 24 24"
             style={{ color: "#4C3D30" }}
           >
@@ -32,7 +31,7 @@ export default function Footer() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
-            className="h-4 w-4"
+            className="h-5 w-5"
             viewBox="0 0 24 24"
             style={{ color: "#4C3D30" }}
           >
@@ -46,11 +45,11 @@ export default function Footer() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
-            className="h-4 w-4"
-            viewBox="0 0 24 24"
+            className="h-5 w-5 ml-1"
+            viewBox="0 0 18 18"
             style={{ color: "#4C3D30" }}
           >
-            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
           </svg>
         </Link>
       </div>

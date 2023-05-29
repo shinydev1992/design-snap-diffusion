@@ -4,7 +4,7 @@ class MyDocument extends Document {
   render() {
     let description = "Generate your dream room in seconds.";
     let ogimage = "https://www.roomgpt.io/og-image.png";
-    let sitename = "roomGPT.io";
+    let sitename = "Design Snap";
     let title = "Dream Room Generator";
 
     return (
@@ -21,7 +21,7 @@ class MyDocument extends Document {
           <meta property="og:image" content={ogimage} />
           <meta name="twitter:image" content={ogimage} />
         </Head>
-        <body className="bg-[#17181C] text-white">
+        <body className="bg-[#F5F0EA] text-[#4C3D30]">
           <Main />
           <NextScript />
         </body>

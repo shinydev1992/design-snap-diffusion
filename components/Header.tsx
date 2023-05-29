@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import useSWR from "swr";
 
 export default function Header({
   photo,
@@ -8,10 +9,12 @@ export default function Header({
   photo?: string;
   email?: string;
 }) {
+  const fetcher = (url: string) => fetch(url).then((res) => res.json());
+  const { data } = useSWR("/api/remaining", fetcher);
+
   return (
     <header
-      className="flex justify-between h-[72px] items-center w-full sm:px-4 px-2 border-gray-500"
-      style={{ background: '#4C3D30' }}
+      className="flex justify-between h-[72px] items-center w-full px-4 sm:bg-[#4C3D30] bg-transparent"
     >
       <Link href="/dream" className="flex space-x-2">
         <Image
@@ -22,8 +25,7 @@ export default function Header({
           height={24}
         />
         <h1
-          className="flex items-center text-xl ml-2"
-          style={{ color: '#CDC0B2', fontFamily: 'inherit', lineHeight: '1.2rem' }}
+          className="flex items-center text-xl ml-2 sm:text-[#CDC0B2] text-[#4C3D30] leading-[1]"
         >
           DESIGN<br/>SNAP
         </h1>
@@ -31,18 +33,12 @@ export default function Header({
       {email ? (
         <div className="flex items-center space-x-4">
           <Link
-            href="/dashboard"
-            className="border-r border-gray-300 pr-4 flex space-x-2 hover:text-blue-400 transition"
-          >
-            <div>Dashboard</div>
-          </Link>
-          <Link
             href="/buy-credits"
-            className="border-r border-gray-300 pr-4 flex space-x-2 hover:text-blue-400 transition"
+            className="border-r-[2px] border-[#CDC0B2] sm:text-[#CDC0B2] text-[#4C3D30] pr-4 flex space-x-2 hover:text-white transition"
           >
-            <div>Buy Credits</div>
-            <div className="text-blue-500 bg-blue-200 rounded-full px-2 text-xs flex justify-center items-center font-bold">
-              New
+            <div className="font-[Arimo] font-bold">
+              {data?.remainingGenerations}{" "}
+              {data?.remainingGenerations > 1 ? "CREDITS" : "CREDIT"}
             </div>
           </Link>
           {photo ? (
@@ -63,7 +59,7 @@ export default function Header({
           style={{ background: '#CDC0B2', color: '#4C3D30' }}
           href="/dream"
         >
-          <p style={{ fontFamily: 'Arimo', fontWeight: 'bold' }}>LOGIN</p>
+          <p className="font-[Arimo], font-bold">LOGIN</p>
         </Link>
       )}
     </header>

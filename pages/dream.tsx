@@ -169,7 +169,7 @@ const Home: NextPage = () => {
             <div className="col-span-3 lg:col-span-1 flex flex-col items-center tracking-widest">
               {data?.remainingGenerations < 1 ? (
                 <div className="flex flex-col">
-                  <div className="border-[2px] border-[#4C3D30] rounded-full py-2 px-16 text-[#897465] text-lg font-arimo font-semibold mt-16">
+                  <div className="border-[2px] border-[#4C3D30] rounded-full py-2 px-16 text-[#897465] sm:text-lg text-sm font-arimo font-semibold mt-16">
                     YOU ARE OUT OF CREDITS<br/>
                     <Link
                       href="/buy-credits"
@@ -182,10 +182,10 @@ const Home: NextPage = () => {
               ) : null}
               <div className={data?.remainingGenerations < 1 ? "mt-8" : "mt-16"}>
                 <div className="uppercase font-semibold">
-                  <div className="w-full max-w-sm mb-4">
+                  <div className="w-full mb-4">
                     <div className="items-center">
                       <p className="font-arimo">
-                        UPLOAD A PHOTO OF YOUR ROOM
+                        STEP #1: UPLOAD A PHOTO OF YOUR ROOM
                       </p>
                     </div>
                   </div>
@@ -224,7 +224,7 @@ const Home: NextPage = () => {
               <div className="w-full max-w-sm mt-4">
                 <div className="items-center mb-4">
                   <p className="font-arimo font-semibold">
-                    SELECT ROOM TYPE
+                    STEP #2: SELECT ROOM TYPE
                   </p>
                 </div>
                 <DropDown
@@ -234,10 +234,10 @@ const Home: NextPage = () => {
                   themes={rooms}
                 />
               </div>
-              <div className="w-full max-w-sm mt-16">
+              <div className="w-full max-w-sm mt-4">
                 <div className="items-center mb-4">
                   <p className="font-semibold font-arimo">
-                    SELECT ROOM THEME (UP TO 4)
+                    STEP #3: SELECT ROOM THEME (UP TO 4)
                   </p>
                 </div>
                 <div className="grid grid-cols-3 gap-2">
@@ -287,7 +287,7 @@ const Home: NextPage = () => {
                         </p>
                       ) : (
                         <div>
-                          YOUR OUT OF CREDITS, <p className="underline">BUY MORE HERE</p>
+                          YOUR OUT OF CREDITS, <span className="underline">BUY MORE HERE</span>
                         </div>
                       )}
                       
@@ -348,7 +348,7 @@ const Home: NextPage = () => {
                     </div>
                     <div className="grid grid-cols-2 w-full gap-4 font-arimo font-semibold mt-4">
                       <button
-                        className="rounded-full w-full bg-[#99552A] text-[#F5F5F5] lg:text-lg md:text-md text-sm sm:px-8 px-4 py-4 tracking-widest"
+                        className="rounded-full w-full bg-[#99552A] text-[#F5F5F5] lg:text-lg md:text-md text-xs sm:px-8 px-4 py-4 tracking-widest"
                         onClick={() => {
                           if (originalPhoto) {
                             generatePhoto(originalPhoto.replace("raw", "thumbnail"));
@@ -358,7 +358,7 @@ const Home: NextPage = () => {
                         REDESIGN NEW ROOM
                       </button>
                       <button
-                        className="rounded-full w-full bg-[#C2B59B] text-[#F5F5F5] lg:text-lg md:text-md text-sm sm:px-8 px-4 py-4 tracking-widest"
+                        className="rounded-full w-full bg-[#C2B59B] text-[#F5F5F5] lg:text-lg md:text-md text-xs sm:px-8 px-4 py-4 tracking-widest"
                         onClick={() => {
                           downloadPhoto(
                             restoredImage!,

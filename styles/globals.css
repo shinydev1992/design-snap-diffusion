@@ -32,3 +32,7 @@
   font-family: "Articulat";
   src: url("./fonts/ArticulatCF-Normal.ttf");
 }
+
+label.btn.btn--file.btn--primary.btn--upload {
+  border-radius: 20px;
+}

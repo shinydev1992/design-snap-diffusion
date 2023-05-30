@@ -22,7 +22,10 @@ const cors = Cors({
 
 const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
-    console.log('==================================================',req.body);
+    console.log('==================================================');
+    console.log(req.body);
+    console.log('================================================');
+
     const buf = await buffer(req);
     const sig = req.headers["stripe-signature"]!;
 

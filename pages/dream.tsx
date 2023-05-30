@@ -184,7 +184,7 @@ const Home: NextPage = () => {
                 <div className="uppercase font-semibold">
                   <div className="w-full mb-4">
                     <div className="items-center">
-                      <p className="font-arimo">
+                      <p className="font-arimo sm:text-md text-sm">
                         STEP #1: UPLOAD A PHOTO OF YOUR ROOM
                       </p>
                     </div>
@@ -223,7 +223,7 @@ const Home: NextPage = () => {
               </div>
               <div className="w-full max-w-sm mt-4">
                 <div className="items-center mb-4">
-                  <p className="font-arimo font-semibold">
+                  <p className="font-arimo font-semibold sm:text-md text-sm">
                     STEP #2: SELECT ROOM TYPE
                   </p>
                 </div>
@@ -236,7 +236,7 @@ const Home: NextPage = () => {
               </div>
               <div className="w-full max-w-sm mt-4">
                 <div className="items-center mb-4">
-                  <p className="font-semibold font-arimo">
+                  <p className="font-semibold font-arimo sm:text-md text-sm">
                     STEP #3: SELECT ROOM THEME (UP TO 4)
                   </p>
                 </div>

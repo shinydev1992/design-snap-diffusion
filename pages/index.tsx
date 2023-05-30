@@ -122,7 +122,7 @@ const Home: NextPage = () => {
               3 EASY STEPS TO
             </h1>
             <h1
-              className="mx-auto sm:max-w-4xl max-w-[240px] font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl"
+              className="mx-auto sm:max-w-4xl max-w-[240px] font-dallas font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl"
               style={{ WebkitTextStroke: '2px #99552A', color: "transparent" }}
             >
               REDESIGN YOUR SPACE
@@ -135,7 +135,7 @@ const Home: NextPage = () => {
             className="h-auto w-full"
             alt="1 icon"
           />
-          <div className="absolute bottom-0 bg-[#AE6A2B] rounded-[32px] text-[#F5F0EA] sm:px-10 px-8 py-4 sm:mt-10 mt-4 font-[Arimo] font-bold text-sm sm:text-xl">
+          <div className="absolute bottom-0 bg-[#AE6A2B] rounded-[32px] text-[#F5F0EA] sm:px-10 px-8 py-4 sm:mt-10 mt-4 font-dallas font-bold text-sm sm:text-xl">
             <Link
               href="/dream"
             >

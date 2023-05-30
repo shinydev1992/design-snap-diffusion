@@ -44,7 +44,7 @@ const Home: NextPage = () => {
                 <h3 className="mb-2 font-medium text-lg font-articulat">Original Room</h3>
                 <img
                   alt="Original photo of a room"
-                  src="/original_room.webp"
+                  src="/original_room.png"
                   className="w-full object-fill h-96 rounded-2xl"
                 />
               </div>
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
                 <h3 className="mb-2 font-medium text-lg font-articulat">Generated Room</h3>
                 <img
                   alt="Generated photo of a room with roomGPT.io"
-                  src="/generated_room.webp"
+                  src="/generated_room.png"
                   className="w-full object-fill h-96 rounded-2xl sm:mt-0 mt-2"
                 />
               </div>
@@ -122,7 +122,7 @@ const Home: NextPage = () => {
               3 EASY STEPS TO
             </h1>
             <h1
-              className="mx-auto sm:max-w-4xl max-w-[240px] font-dallas font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl"
+              className="mx-auto sm:max-w-4xl max-w-[300px] font-dallas font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl"
               style={{ WebkitTextStroke: '2px #99552A', color: "transparent" }}
             >
               REDESIGN YOUR SPACE
@@ -148,7 +148,7 @@ const Home: NextPage = () => {
         <div className="mx-auto  px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
           <div className="mx-auto">
             <h1
-              className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl"
+              className="mx-auto max-w-4xl font-display text-4xl font-bold font-dallas tracking-normal text-[#99552A] sm:text-6xl"
               style={{ WebkitTextStroke: '2px #99552A', color: "transparent" }}
             >
               #DESIGN SNAP

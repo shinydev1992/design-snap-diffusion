@@ -31,7 +31,7 @@ export default function Header({
         </h1>
       </Link>
       {email ? (
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 tracking-widest">
           <Link
             href="/buy-credits"
             className="border-r-[2px] border-[#CDC0B2] sm:text-[#CDC0B2] text-[#4C3D30] pr-4 flex space-x-2 hover:text-white transition"

@@ -44,7 +44,7 @@ const Home: NextPage = () => {
                 <h3 className="mb-2 font-medium text-lg font-articulat">Original Room</h3>
                 <img
                   alt="Original photo of a room"
-                  src="/original_room.png"
+                  src="/original_room.webp"
                   className="w-full object-fill h-96 rounded-2xl"
                 />
               </div>
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
                 <h3 className="mb-2 font-medium text-lg font-articulat">Generated Room</h3>
                 <img
                   alt="Generated photo of a room with roomGPT.io"
-                  src="/generated_room.png"
+                  src="/generated_room.webp"
                   className="w-full object-fill h-96 rounded-2xl sm:mt-0 mt-2"
                 />
               </div>
@@ -121,7 +121,10 @@ const Home: NextPage = () => {
             <h1 className="mx-auto max-w-4xl font-extrabold font-display text-xl tracking-normal text-[#545E56] sm:text-2xl mb-2">
               3 EASY STEPS TO
             </h1>
-            <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl">
+            <h1
+              className="mx-auto sm:max-w-4xl max-w-[240px] font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl"
+              style={{ WebkitTextStroke: '2px #99552A', color: "transparent" }}
+            >
               REDESIGN YOUR SPACE
             </h1>
           </div>
@@ -144,7 +147,10 @@ const Home: NextPage = () => {
       <section className="py-4 sm:py-12 max-w-7xl">
         <div className="mx-auto  px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
           <div className="mx-auto">
-            <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl">
+            <h1
+              className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl"
+              style={{ WebkitTextStroke: '2px #99552A', color: "transparent" }}
+            >
               #DESIGN SNAP
             </h1>
           </div>

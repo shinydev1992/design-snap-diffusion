@@ -28,7 +28,7 @@ export default function Pricing() {
             </p>
           </div>
         </div>
-        <p className="mx-auto mt-6 sm:max-w-[640px] max-w-[360px] font-articulat tracking-widest text-center text-lg leading-6 sm:mb-10 mb-4">
+        <p className="mx-auto mt-6 sm:max-w-[640px] max-w-[300px] font-articulat tracking-widest text-center sm:text-lg text-sm leading-6 sm:mb-10 mb-4">
           You have{" "}
           <span className="font-semibold uppercase">
             {data?.remainingGenerations}{" "}

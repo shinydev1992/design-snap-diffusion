@@ -22,29 +22,29 @@ const cors = Cors({
 
 const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
-    console.log(req);
-    // const buf = await buffer(req);
-    // const sig = req.headers["stripe-signature"]!;
+    console.log('==================================================',req.body);
+    const buf = await buffer(req);
+    const sig = req.headers["stripe-signature"]!;
 
-    // let event: Stripe.Event;
-    // try {
-    //   event = stripe.webhooks.constructEvent(
-    //     buf.toString(),
-    //     sig,
-    //     webhookSecret
-    //   );
-    // } catch (err) {
-    //   const errorMessage = err instanceof Error ? err.message : "Unknown error";
-    //   // On error, log and return the error message.
-    //   if (err! instanceof Error) console.log(err);
-    //   console.log(`❌ Error message: ${errorMessage}`);
-    //   res.status(400).send(`Webhook Error: ${errorMessage}`);
-    //   return;
-    // }
+    let event: Stripe.Event;
+    try {
+      event = stripe.webhooks.constructEvent(
+        buf.toString(),
+        sig,
+        webhookSecret
+      );
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : "Unknown error";
+      // On error, log and return the error message.
+      if (err! instanceof Error) console.log(err);
+      console.log(`❌ Error message: ${errorMessage}`);
+      res.status(400).send(`Webhook Error: ${errorMessage}`);
+      return;
+    }
 
-    const event = req.body;
+    // const event = req.body;
     // Successfully constructed event.
-    // console.log("✅ Success:", event.id);
+    console.log("✅ Success:", event.id);
 
     // Cast event data to Stripe object.
     if (

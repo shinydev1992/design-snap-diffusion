@@ -10,6 +10,11 @@ module.exports = {
       screens: {
         xs: "330px",
       },
+      fontFamily: {
+        arimo: ["Arimo", "sans-serif"],
+        dallas: ["Dallas", "sans-serif"],
+        articulat: ["Articulat", "sans-serif"]
+      }
     },
   },
   plugins: [require("@tailwindcss/forms"), require("@headlessui/tailwindcss")],

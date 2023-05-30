@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="w-full h-[72px] flex flex-col sm:flex-row justify-center items-center relative mt-4">
       <div
-        className="font-semibold flex color-[#4C3D30] font-[Arimo] uppercase" 
+        className="font-semibold flex color-[#4C3D30] font-arimo uppercase tracking-widest" 
       >
         <p>Powered by THEDESIGNSNAP</p>
       </div>

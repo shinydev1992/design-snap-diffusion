@@ -68,7 +68,7 @@ export function Testimonials() {
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center">
         <div className="mx-auto text-center">
-          <h1 className="mx-auto max-w-4xl font-display text-2xl font-bold tracking-normal text-[#4C3D30] sm:text-6xl">
+          <h1 className="mx-auto max-w-5xl font-dallas font-display text-2xl font-bold tracking-normal text-[#4C3D30] sm:text-6xl">
             DESIGN ENTHUSIASTS AGREE
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-xs sm:text-lg text-[#4C3D30] leading-1">

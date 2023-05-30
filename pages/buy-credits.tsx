@@ -23,14 +23,14 @@ export default function Pricing() {
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mb-0 mb-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto sm:max-w-[680px] max-w-[320px] text-center">
-            <p className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
+            <p className="mt-2 text-4xl font-dallas font-bold tracking-tight sm:text-5xl">
               BUY DESIGN SNAP CREDITS
             </p>
           </div>
         </div>
-        <p className="mx-auto mt-6 sm:max-w-[580px] max-w-[300px] text-center text-lg leading-6 sm:mb-10 mb-4">
+        <p className="mx-auto mt-6 sm:max-w-[640px] max-w-[360px] font-articulat tracking-widest text-center text-lg leading-6 sm:mb-10 mb-4">
           You have{" "}
-          <span className="font-semibold">
+          <span className="font-semibold uppercase">
             {data?.remainingGenerations}{" "}
             {data?.remainingGenerations > 1 ? "credits" : "credit"}
           </span>
@@ -48,13 +48,13 @@ export default function Pricing() {
         )}
       </div>
       <div className="mt-10 text-center">
-        <h4 className="flex-none leading-6 mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
+        <h4 className="flex-none leading-6 mt-2 text-4xl font-dallas font-bold tracking-tight sm:text-5xl">
           WHAT IS A CREDIT?
         </h4>
       </div>
       <ul
         role="list"
-        className="mt-8 grid grid-cols-1 gap-4 leading-6 sm:grid-cols-2 sm:gap-6 mb-10"
+        className="mt-8 grid grid-cols-1 gap-4 leading-6 sm:grid-cols-2 sm:gap-6 mb-10 font-articulat font-bold tracking-widest"
       >
         <li className="flex gap-x-3">
           <svg
@@ -118,7 +118,7 @@ export default function Pricing() {
           Extra design support & details
         </li>
       </ul>
-      <p className="mb-5 text-center">
+      <p className="mb-5 text-center font-articulat font-bold tracking-widest">
         Interested in team or bulk pricing?<br/> Email me at hannah@thedesignsnap.com
       </p>
       <Footer />

@@ -14,7 +14,7 @@ export default function Header({
 
   return (
     <header
-      className="flex justify-between h-[72px] items-center w-full px-4 sm:bg-[#4C3D30] bg-transparent"
+      className="flex justify-between h-[72px] items-center w-full sm:px-12 px-4 sm:bg-[#4C3D30] bg-transparent"
     >
       <Link href="/dream" className="flex space-x-2">
         <Image
@@ -25,7 +25,7 @@ export default function Header({
           height={24}
         />
         <h1
-          className="flex items-center text-xl ml-2 sm:text-[#CDC0B2] text-[#4C3D30] leading-[1]"
+          className="flex items-center font-articulat text-lg ml-2 sm:text-[#CDC0B2] text-[#4C3D30] leading-[1] tracking-widest"
         >
           DESIGN<br/>SNAP
         </h1>
@@ -59,7 +59,7 @@ export default function Header({
           style={{ background: '#CDC0B2', color: '#4C3D30' }}
           href="/dream"
         >
-          <p className="font-[Arimo], font-bold">LOGIN</p>
+          <p className="font-arimo font-bold tracking-widest">LOGIN</p>
         </Link>
       )}
     </header>

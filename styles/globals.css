@@ -17,3 +17,18 @@
     pointer-events: none;
   }
 }
+
+@font-face {
+  font-family: "Arimo";
+  src: url("./fonts/Arimo-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Dallas";
+  src: url("./fonts/Dallas-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Articulat";
+  src: url("./fonts/ArticulatCF-Normal.ttf");
+}

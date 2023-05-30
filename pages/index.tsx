@@ -23,37 +23,37 @@ const Home: NextPage = () => {
       />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20 background-gradient">
         <h1
-          className="mx-auto max-w-4xl font-display text-4xl sm:text-6xl font-bold font-[Arimo] leading-[1]"
+          className="mx-auto max-w-4xl font-display text-4xl sm:text-6xl font-bold font-dallas leading-[1]"
         >
           REDESIGN ROOMS<br/> IN SECONDS
         </h1>
-        <h2 className="mx-auto mt-4 sm:max-w-4xl max-w-xl sm:text-lg text-[#4C3D30] leading-1 font-[Arimo]">
+        <h2 className="mx-auto mt-4 sm:max-w-4xl max-w-xl sm:text-lg text-[#4C3D30] leading-1">
           Take a picture of a room & instantly re-design it.<br/>
           Design Snap the perfect inspiration for your next room
         </h2>
         <Link
-          className="bg-[#AE6A2B] rounded-full text-[#F5F0EA] px-8 py-3 sm:mt-10 mt-8 font-[Arimo] font-bold"
+          className="bg-[#AE6A2B] rounded-full text-[#F5F0EA] px-8 py-3 sm:mt-10 mt-8 font-arimo font-bold"
           href="/dream"
         >
           REDESIGN YOUR ROOM
         </Link>
         <div className="flex justify-between items-center w-full flex-col sm:mt-10 mt-6">
           <div className="flex flex-col space-y-10 mt-4 mb-4">
-            <div className="flex sm:space-x-8 sm:flex-row flex-col">
+            <div className="flex sm:space-x-8 sm:flex-row flex-col tracking-[0.3em]">
               <div>
-                <h3 className="mb-2 font-medium text-lg font-[Arimo]">Original Room</h3>
+                <h3 className="mb-2 font-medium text-lg font-articulat">Original Room</h3>
                 <img
                   alt="Original photo of a room"
                   src="/original_room.png"
-                  className="w-full object-cover h-96 rounded-2xl"
+                  className="w-full object-fill h-96 rounded-2xl"
                 />
               </div>
               <div className="sm:mt-0 mt-8">
-                <h3 className="mb-2 font-medium text-lg font-[Arimo]">Generated Room</h3>
+                <h3 className="mb-2 font-medium text-lg font-articulat">Generated Room</h3>
                 <img
                   alt="Generated photo of a room with roomGPT.io"
                   src="/generated_room.png"
-                  className="w-full object-cover h-96 rounded-2xl sm:mt-0 mt-2"
+                  className="w-full object-fill h-96 rounded-2xl sm:mt-0 mt-2"
                 />
               </div>
             </div>
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
       <section className="py-10 max-w-7xl">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
           <div className="mx-auto">
-            <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-[#4C3D30] sm:text-6xl leading-[1]">
+            <h1 className="mx-auto max-w-4xl font-dallas font-display text-4xl font-bold tracking-normal text-[#4C3D30] sm:text-6xl leading-[1]">
               BESPOKE DESIGNS<br/> MADE FROM A.I
             </h1>
           </div>
@@ -118,7 +118,7 @@ const Home: NextPage = () => {
       <section className="py-4 max-w-7xl">
         <div className="mx-auto  px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
           <div className="mx-auto">
-            <h1 className="mx-auto max-w-4xl font-display text-xl font-bold tracking-normal text-[#545E56] sm:text-2xl mb-2">
+            <h1 className="mx-auto max-w-4xl font-extrabold font-display text-xl tracking-normal text-[#545E56] sm:text-2xl mb-2">
               3 EASY STEPS TO
             </h1>
             <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl">

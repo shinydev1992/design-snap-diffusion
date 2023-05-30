@@ -163,13 +163,13 @@ const Home: NextPage = () => {
         photo={session?.user?.image || undefined}
         email={session?.user?.email || undefined}
       />
-      <main className="flex flex-1 w-full flex-col justify-center text-center px-4 sm:mb-0">
+      <main className="flex flex-1 w-full flex-col justify-center text-center sm:px-12 px-4 sm:mb-0">
         {status === "authenticated" ? (
-          <div className="grid grid-cols-3 gap-8 sm:flex-row flex-col">
-            <div className="col-span-3 sm:col-span-1 flex flex-col items-center">
+          <div className="grid grid-cols-3 gap-8 md:flex-row flex-col">
+            <div className="col-span-3 lg:col-span-1 flex flex-col items-center tracking-widest">
               {data?.remainingGenerations < 1 ? (
                 <div className="flex flex-col">
-                  <div className="border-[2px] border-[#4C3D30] rounded-full py-2 px-16 text-[#897465] text-lg font-medium mt-16">
+                  <div className="border-[2px] border-[#4C3D30] rounded-full py-2 px-16 text-[#897465] text-lg font-arimo font-semibold mt-16">
                     YOU ARE OUT OF CREDITS<br/>
                     <Link
                       href="/buy-credits"
@@ -181,47 +181,49 @@ const Home: NextPage = () => {
                 </div>
               ) : null}
               <div className={data?.remainingGenerations < 1 ? "mt-8" : "mt-16"}>
-                <div className="w-full max-w-sm mb-4">
-                  <div className="items-center">
-                    <p className="font-medium">
-                      UPLOAD A PHOTO OF YOUR ROOM
-                    </p>
-                  </div>
-                </div>
-                {originalPhoto
-                  ? (
-                    <div className="flex flex-col w-full max-w-sm mt-8 bg-[#CDC0B2] rounded-xl px-3 py-3">
-                      <div className="flex justify-between mb-2 mr-1 ml-1">
-                        <div>ORIGINAL ROOM</div>
-                        <div onClick={() => setOriginalPhoto(null)}>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            className="text-[#4C3D30] hover:text-[#F5F0EA] transition"
-                          >
-                            <path d="M3 6L5 6 21 6"></path>
-                            <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
-                          </svg>
-                        </div>
-                      </div>
-                      <img
-                        src={originalPhoto}
-                        className="w-full h-full rounded-lg"
-                      />
+                <div className="uppercase font-semibold">
+                  <div className="w-full max-w-sm mb-4">
+                    <div className="items-center">
+                      <p className="font-arimo">
+                        UPLOAD A PHOTO OF YOUR ROOM
+                      </p>
                     </div>
-                  )
-                : <UploadDropZone />}
+                  </div>
+                  {originalPhoto
+                    ? (
+                      <div className="flex flex-col w-full max-w-sm mt-8 bg-[#CDC0B2] rounded-xl px-3 py-3">
+                        <div className="flex justify-between mb-2 mr-1 ml-1">
+                          <div className="font-arimo">ORIGINAL ROOM</div>
+                          <div onClick={() => setOriginalPhoto(null)}>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              className="text-[#4C3D30] hover:text-[#F5F0EA] transition"
+                            >
+                              <path d="M3 6L5 6 21 6"></path>
+                              <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <img
+                          src={originalPhoto}
+                          className="w-full h-full rounded-lg object-fill"
+                        />
+                      </div>
+                    )
+                  : <UploadDropZone />}
+                </div>
               </div>
               <div className="w-full max-w-sm mt-4">
                 <div className="items-center mb-4">
-                  <p className="font-medium">
+                  <p className="font-arimo font-semibold">
                     SELECT ROOM TYPE
                   </p>
                 </div>
@@ -234,7 +236,7 @@ const Home: NextPage = () => {
               </div>
               <div className="w-full max-w-sm mt-16">
                 <div className="items-center mb-4">
-                  <p className="font-medium">
+                  <p className="font-semibold font-arimo">
                     SELECT ROOM THEME (UP TO 4)
                   </p>
                 </div>
@@ -260,38 +262,47 @@ const Home: NextPage = () => {
                         </div>
                       ) : null}
                       <img src={item.image} className={theme === item.type ? "border-2 border-[#99552A]" : ""} />
-                      <span className="text-xs font-semifont">{item.name}</span>
+                      <span className="text-xs font-arimo font-semibold">{item.name}</span>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="w-full max-w-sm mt-8">
                 <button
-                  className="w-full rounded-full border-[#99552A] bg-[#99552A] text-white text-md font-semibold px-8 py-2"
+                  className="w-full rounded-full border-[#99552A] bg-[#99552A] text-white text-md font-semibold px-8 py-3"
                   onClick={() => {
                     if (originalPhoto) {
                       generatePhoto(originalPhoto.replace("raw", "thumbnail"));
                     }
                   }}
                 >
-                  <p className="text-center">
+                  <p className="text-center font-arimo tracking-normal leading-[1] mt-1">
                     RENDER DESIGN<br/>
                     <span className="text-xs font-medium">
-                      COST 1 CREDIT |{" "}
-                      {data?.remainingGenerations}{" "}
-                      {data?.remainingGenerations > 1 ? "CREDITS LEFT" : "CREDIT LEFT"}
+                      {data?.remainingGenerations > 1 ? (
+                        <p>
+                          COST 1 CREDIT |{" "}
+                          {data?.remainingGenerations}{" "}
+                          {data?.remainingGenerations > 1 ? "CREDITS LEFT" : "CREDIT LEFT"}
+                        </p>
+                      ) : (
+                        <div>
+                          YOUR OUT OF CREDITS, <p className="underline">BUY MORE HERE</p>
+                        </div>
+                      )}
+                      
                     </span>
                   </p>
                 </button>
               </div>
             </div>
-            <div className="col-span-3 sm:col-span-2 flex flex-col items-center">
+            <div className="col-span-3 lg:col-span-2 flex flex-col items-center">
               <h1
-                className="mx-auto w-full sm:max-w-[900px] max-w-[360px] font-display text-5xl sm:text-6xl font-bold font-[Arimo] py-2 sm:mt-8 mt-4"
+                className="sm:block hidden mx-auto w-full sm:max-w-[980px] max-w-[360px] font-display text-5xl sm:text-6xl font-bold font-dallas py-2 sm:mt-8 mt-4"
               >
                 REDESIGN YOUR ROOM NOW
               </h1>
-              <p className="uppercase sm:max-w-[500px] max-w-[320px] leading-[1] mt-4">
+              <p className="sm:block hidden font-arimo font-semibold sm:text-[16px] text-sm uppercase sm:max-w-[600px] max-w-[320px] leading-[1] mt-4 tracking-widest">
                 START by uploading your photo, selecting room type, Room style, and Hitting submit
               </p>
               {error && (
@@ -312,7 +323,7 @@ const Home: NextPage = () => {
                   <Rings
                     height="100"
                     width="100"
-                    color="white"
+                    color="#4C3D30"
                     radius="6"
                     wrapperStyle={{}}
                     wrapperClass=""
@@ -328,16 +339,16 @@ const Home: NextPage = () => {
                         <Image
                           alt="restored photo"
                           src={restoredImage}
-                          className="rounded-2xl relative sm:mt-0 mt-2 cursor-zoom-in"
+                          className="rounded-2xl relative sm:mt-0 mt-2 cursor-zoom-in object-fill"
                           width={500}
                           height={400}
                           onLoadingComplete={() => setRestoredLoaded(true)}
                         />
                       </a>
                     </div>
-                    <div className="grid grid-cols-2 w-full gap-4 font-medium mt-4">
+                    <div className="grid grid-cols-2 w-full gap-4 font-arimo font-semibold mt-4">
                       <button
-                        className="rounded-full w-full bg-[#99552A] text-[#F5F5F5] lg:text-lg md:text-md text-sm sm:px-8 px-4 py-4"
+                        className="rounded-full w-full bg-[#99552A] text-[#F5F5F5] lg:text-lg md:text-md text-sm sm:px-8 px-4 py-4 tracking-widest"
                         onClick={() => {
                           if (originalPhoto) {
                             generatePhoto(originalPhoto.replace("raw", "thumbnail"));
@@ -347,7 +358,7 @@ const Home: NextPage = () => {
                         REDESIGN NEW ROOM
                       </button>
                       <button
-                        className="rounded-full w-full bg-[#C2B59B] text-[#F5F5F5] lg:text-lg md:text-md text-sm sm:px-8 px-4 py-4"
+                        className="rounded-full w-full bg-[#C2B59B] text-[#F5F5F5] lg:text-lg md:text-md text-sm sm:px-8 px-4 py-4 tracking-widest"
                         onClick={() => {
                           downloadPhoto(
                             restoredImage!,
@@ -369,13 +380,13 @@ const Home: NextPage = () => {
               <motion.div className="flex justify-between items-center w-full flex-col mt-4">
                 <div className="flex flex-col items-center space-y-6 max-w-[670px] -mt-8">
                   <h1
-                    className="mx-auto sm:max-w-[400px] max-w-[360px] font-display text-center text-5xl sm:text-6xl font-bold font-[Arimo] py-2 mt-8"
+                    className="mx-auto sm:max-w-[400px] max-w-[360px] font-display text-center text-5xl sm:text-6xl font-bold font-dallas py-2 mt-8"
                   >
                     REDESIGN YOUR ROOM IN A SNAP
                   </h1>
-                  <div className="text-sm sm:text-lg">
-                    <div className="sm:max-w-[440px] max-w-[400px] font-bold font-[Arimo]">
-                      <p>
+                  <div className="text-sm sm:text-md">
+                    <div className="sm:max-w-[440px] max-w-[400px] font-bold font-arimo tracking-widest">
+                      <p className="leading-[1]">
                         SIGN IN BELOW TO CREATE A FREE ACCOUNT &
                         REDESIGN YOUR ROOM TODAY
                       </p>

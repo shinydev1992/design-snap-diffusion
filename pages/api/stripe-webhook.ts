@@ -22,9 +22,6 @@ const cors = Cors({
 
 const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
-    console.log('==================================================');
-    console.log(req.body);
-    console.log('================================================');
 
     const buf = await buffer(req);
     const sig = req.headers["stripe-signature"]!;
@@ -51,7 +48,7 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     // Cast event data to Stripe object.
     if (
-      event.type === "payment_intent.succeeded" ||
+      // event.type === "payment_intent.succeeded" ||
       event.type === "checkout.session.completed"
     ) {
       const paymentIntent = event.data.object as Stripe.PaymentIntent;

@@ -73,32 +73,32 @@ const Home: NextPage = () => {
     {
       name: 'MODERN',
       type: 'Modern',
-      image: '/theme-modern.webp',
+      image: '/theme-modern.png',
     },
     {
       name: 'MINIMALIST',
       type: 'Minimalist',
-      image: '/theme-minimalist.webp',
+      image: '/theme-minimalist.png',
     },
     {
       name: 'PROFESSIONAL',
       type: 'Professional',
-      image: '/theme-professional.webp',
+      image: '/theme-professional.png',
     },
     {
       name: 'VINTAGE',
       type: 'Vintage',
-      image: '/theme-vintage.webp',
+      image: '/theme-vintage.png',
     },
     {
       name: 'INDUSTRIAL',
       type: 'Industrial',
-      image: '/theme-industrial.webp',
+      image: '/theme-industrial.png',
     },
     {
       name: 'CLASSIC',
       type: 'Neoclassic',
-      image: '/theme-classic.webp',
+      image: '/theme-classic.png',
     },
   ];
 

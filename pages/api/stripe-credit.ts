@@ -45,7 +45,7 @@ export default async function handler(req: NextApiRequest,
     }
 
     const checkoutSession = await stripe.checkout.sessions.create({
-      success_url: 'https://localhost:3000/dream',
+      success_url: 'https://thedesignsnap.com/dream',
       line_items: [
         { price: priceID, quantity: 1 },
       ],

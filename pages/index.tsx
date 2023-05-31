@@ -22,11 +22,11 @@ const Home: NextPage = () => {
       />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20 background-gradient">
         <h1
-          className="mx-auto max-w-4xl font-display text-4xl sm:text-6xl font-bold font-dallas leading-[1]"
+          className="mx-auto max-w-4xl font-display text-3xl sm:text-6xl font-bold font-dallas leading-[1]"
         >
           REDESIGN ROOMS<br/> IN SECONDS
         </h1>
-        <h2 className="mx-auto mt-4 sm:max-w-4xl max-w-xl sm:text-lg text-[#4C3D30] leading-1">
+        <h2 className="mx-auto mt-4 sm:max-w-4xl max-w-xl sm:text-lg text-xs text-[#4C3D30] leading-1">
           Take a picture of a room & instantly re-design it.<br/>
           Design Snap the perfect inspiration for your next room
         </h2>
@@ -63,8 +63,8 @@ const Home: NextPage = () => {
       <section className="py-10 max-w-7xl">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
           <div className="mx-auto">
-            <h1 className="mx-auto max-w-4xl font-dallas font-display text-4xl font-bold tracking-normal text-[#4C3D30] sm:text-6xl leading-[1]">
-              BESPOKE DESIGNS<br/> MADE FROM A.I
+            <h1 className="mx-auto max-w-[360px] font-dallas font-display text-3xl font-bold tracking-normal text-[#4C3D30] sm:text-6xl leading-[1]">
+              BESPOKE DESIGNS MADE FROM A.I
             </h1>
           </div>
           <div
@@ -117,11 +117,11 @@ const Home: NextPage = () => {
       <section className="py-4 max-w-7xl">
         <div className="mx-auto  px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
           <div className="mx-auto">
-            <h1 className="mx-auto max-w-4xl font-extrabold font-display text-xl tracking-normal text-[#545E56] sm:text-2xl mb-2">
+            <h1 className="mx-auto max-w-4xl font-extrabold font-display text-lg tracking-normal text-[#545E56] sm:text-2xl mb-2">
               3 EASY STEPS TO
             </h1>
             <h1
-              className="mx-auto sm:max-w-4xl max-w-[300px] font-dallas font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl"
+              className="mx-auto sm:max-w-4xl max-w-[300px] font-dallas font-display text-3xl font-bold tracking-normal text-[#99552A] sm:text-6xl"
               style={{ WebkitTextStroke: '2px #99552A', color: "transparent" }}
             >
               REDESIGN YOUR SPACE
@@ -156,7 +156,7 @@ const Home: NextPage = () => {
         </div>
         <div
           role="list"
-          className="mx-auto mt-8 grid w-full grid-cols-2 lg:mt-16 sm:max-w-none lg:grid-cols-4"
+          className="mx-auto mt-8 grid w-full grid-cols-2 lg:mt-16 lg:grid-cols-4"
         >
           <img
             src="/1.png"

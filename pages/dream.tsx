@@ -221,7 +221,7 @@ const Home: NextPage = () => {
                   : <UploadDropZone />}
                 </div>
               </div>
-              <div className="w-full max-w-sm mt-4">
+              <div className="w-full max-w-sm mt-6">
                 <div className="items-center mb-4">
                   <p className="font-arimo font-semibold sm:text-md text-sm">
                     STEP #2: SELECT ROOM TYPE
@@ -234,7 +234,7 @@ const Home: NextPage = () => {
                   themes={rooms}
                 />
               </div>
-              <div className="w-full max-w-sm mt-4">
+              <div className="w-full max-w-sm mt-6">
                 <div className="items-center mb-4">
                   <p className="font-semibold font-arimo sm:text-md text-sm">
                     STEP #3: SELECT ROOM THEME (UP TO 4)
@@ -334,7 +334,7 @@ const Home: NextPage = () => {
               ) : (
                 restoredImage && originalPhoto && (
                   <div className="flex flex-col">
-                    <div className="sm:p-8 p-0 sm:mt-0 mt-10 place-items-center w-full grid grid-cols-1 gap-10 lg:grid-cols-1 lg:grid-rows-1">
+                    <div className="sm:p-8 p-0 sm:mt-0 mt-8 place-items-center w-full grid grid-cols-1 gap-10 lg:grid-cols-1 lg:grid-rows-1">
                       <a href={restoredImage} target="_blank" rel="noreferrer">
                         <Image
                           alt="restored photo"

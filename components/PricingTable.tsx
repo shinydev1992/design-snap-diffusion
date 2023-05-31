@@ -29,8 +29,8 @@ export default function PricingTable({ price, credit, tag }: PricingProps) {
             <p className="text-sm font-articulat mt-1">{credit} room designs with any theme!</p>
             <button
               className="sm:bg-[#4C3D30] bg-[#99552A] rounded-full text-white text-lg font-arimo uppercase w-full px-8 py-2 mt-4"
-              onClick={()=>{
-                buyCredit('1');
+              onClick={() => {
+                buyCredit('2');
               }}
             >
               Buy now
@@ -43,6 +43,9 @@ export default function PricingTable({ price, credit, tag }: PricingProps) {
           <p className="text-sm font-articulat mt-2">{credit} room designs with any theme!</p>
           <button
             className="sm:bg-[#4C3D30] bg-[#99552A] rounded-full text-white text-lg font-arimo uppercase w-full px-8 py-2 mt-4"
+            onClick={() => {
+              price === '10' ? buyCredit('1') : buyCredit('3');
+            }}
           >
             Buy now
           </button>

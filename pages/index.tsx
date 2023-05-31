@@ -156,7 +156,7 @@ const Home: NextPage = () => {
         </div>
         <div
           role="list"
-          className="mx-auto mt-8 grid w-full grid-cols-2 lg:mt-16 lg:grid-cols-4"
+          className="mt-8 grid w-full grid-cols-2 lg:mt-16 lg:grid-cols-4"
         >
           <img
             src="/1.png"

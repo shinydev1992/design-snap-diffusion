@@ -271,8 +271,12 @@ const Home: NextPage = () => {
                 <button
                   className={`w-full rounded-full ${data?.remainingGenerations > 0 ? "border-[#99552A] bg-[#99552A]" : "border-[#FFA59F] bg-[#FFA59F]"} text-white text-md font-semibold px-8 py-3`}
                   onClick={() => {
-                    if (originalPhoto) {
-                      generatePhoto(originalPhoto.replace("raw", "thumbnail"));
+                    if (data.remainingGenerations > 0) {
+                      if (originalPhoto) {
+                        generatePhoto(originalPhoto.replace("raw", "thumbnail"));
+                      }
+                    } else {
+                      router.push('/buy-credits');
                     }
                   }}
                 >
@@ -348,7 +352,8 @@ const Home: NextPage = () => {
                     </div>
                     <div className="grid grid-cols-2 w-full gap-4 font-arimo font-semibold mt-4">
                       <button
-                        className="rounded-full w-full bg-[#99552A] text-[#F5F5F5] lg:text-lg md:text-md text-xs sm:px-8 px-4 py-4 tracking-widest"
+                        className={`rounded-full w-full ${data?.remainingGenerations > 0 ? "bg-[#99552A]" : "bg-[#897465]"} text-[#F5F5F5] lg:text-lg md:text-md text-xs sm:px-8 px-4 py-4 tracking-widest`}
+                        disabled={data?.remainingGenerations > 0 ? true : false}
                         onClick={() => {
                           if (originalPhoto) {
                             generatePhoto(originalPhoto.replace("raw", "thumbnail"));

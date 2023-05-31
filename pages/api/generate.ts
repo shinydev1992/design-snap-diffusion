@@ -67,6 +67,7 @@ export default async function handler(
   });
 
   try {
+    console.log(user);
     const { imageUrl, theme, room } = req.body;
     const prompt =
       room === "Gaming Room"
@@ -99,7 +100,6 @@ export default async function handler(
     );
 
     let jsonStartResponse = await startResponse.json();
-
     let endpointUrl = jsonStartResponse.urls.get;
     const originalImage = jsonStartResponse.input.image;
     const roomId = jsonStartResponse.id;

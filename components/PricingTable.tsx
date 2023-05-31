@@ -22,7 +22,7 @@ export default function PricingTable({ price, credit, tag }: PricingProps) {
   return (
     <>
       {tag ? (
-        <div className="border-[#4C3D30] border-2 rounded-3xl bg-[#CDC0B2]">
+        <div className="border-[#4C3D30] border-2 rounded-3xl bg-[#e4dbd1]">
           <div className="flex flex-col items-center ml-6 mb-6 mr-6 font-semibold tracking-widest">
             <p className="text-sm font-articulat mt-2 mb-1">Most popular</p>
             <p className="text-2xl font-arimo uppercase">${price} For {credit} Credits</p>

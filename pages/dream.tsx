@@ -267,9 +267,9 @@ const Home: NextPage = () => {
                   ))}
                 </div>
               </div>
-              <div className="w-full max-w-sm mt-8">
+              <div className="w-full max-w-sm mt-8 ">
                 <button
-                  className="w-full rounded-full border-[#99552A] bg-[#99552A] text-white text-md font-semibold px-8 py-3"
+                  className={`w-full rounded-full ${data?.remainingGenerations > 0 ? "border-[#99552A] bg-[#99552A]" : "border-[#FFA59F] bg-[#FFA59F]"} text-white text-md font-semibold px-8 py-3`}
                   onClick={() => {
                     if (originalPhoto) {
                       generatePhoto(originalPhoto.replace("raw", "thumbnail"));
@@ -279,7 +279,7 @@ const Home: NextPage = () => {
                   <p className="text-center font-arimo tracking-normal leading-[1] mt-1">
                     RENDER DESIGN<br/>
                     <span className="text-xs font-medium">
-                      {data?.remainingGenerations > 1 ? (
+                      {data?.remainingGenerations > 0 ? (
                         <p>
                           COST 1 CREDIT |{" "}
                           {data?.remainingGenerations}{" "}

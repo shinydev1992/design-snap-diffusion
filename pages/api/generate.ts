@@ -50,9 +50,9 @@ export default async function handler(
   let REPLICATE_KEY = process.env.REPLICATE_API_KEY;
 
   // Check to see if user is a paying customer
-  if (user?._count?.purchases && user?._count?.purchases > 0) {
-    REPLICATE_KEY = process.env.REPLICATE_API_KEY_PAID;
-  }
+  // if (user?._count?.purchases && user?._count?.purchases > 0) {
+  //   REPLICATE_KEY = process.env.REPLICATE_API_KEY_PAID;
+  // }
 
   // If they have credits, decrease their credits by one and continue
   await prisma.user.update({
@@ -67,7 +67,6 @@ export default async function handler(
   });
 
   try {
-    console.log(user);
     const { imageUrl, theme, room } = req.body;
     const prompt =
       room === "Gaming Room"
@@ -100,6 +99,7 @@ export default async function handler(
     );
 
     let jsonStartResponse = await startResponse.json();
+    console.log(jsonStartResponse);
     let endpointUrl = jsonStartResponse.urls.get;
     const originalImage = jsonStartResponse.input.image;
     const roomId = jsonStartResponse.id;

@@ -49,7 +49,7 @@ export default function Pricing() {
         )}
       </div>
       <div className="mt-10 text-center">
-        <h4 className="flex-none leading-6 mt-2 text-4xl font-arimo font-bold tracking-widest sm:text-5xl">
+        <h4 className="flex-none leading-6 mt-2 text-3xl font-arimo font-bold tracking-widest sm:text-5xl">
           WHAT'S INCLUDED?
         </h4>
       </div>

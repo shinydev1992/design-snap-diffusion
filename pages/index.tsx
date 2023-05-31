@@ -150,7 +150,7 @@ const Home: NextPage = () => {
               className="mx-auto max-w-4xl font-display text-4xl font-bold font-dallas tracking-normal text-[#99552A] sm:text-6xl"
               style={{ WebkitTextStroke: '2px #99552A', color: "transparent" }}
             >
-              #DESIGN SNAP#######################
+              #DESIGN SNAP
             </h1>
           </div>
         </div>

@@ -306,7 +306,7 @@ const Home: NextPage = () => {
               >
                 REDESIGN YOUR ROOM NOW
               </h1>
-              <p className="sm:block hidden font-arimo font-semibold sm:text-[16px] text-sm uppercase sm:max-w-[600px] max-w-[320px] leading-[1] mt-4 tracking-widest">
+              <p className="sm:block hidden font-arimo font-semibold sm:text-[16px] text-xs uppercase sm:max-w-[600px] max-w-[320px] leading-[1] mt-4 tracking-widest">
                 START by uploading your photo, selecting room type, Room style, and Hitting submit
               </p>
               {error && (

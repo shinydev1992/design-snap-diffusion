@@ -63,7 +63,7 @@ const Home: NextPage = () => {
       <section className="py-10 max-w-7xl">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
           <div className="mx-auto">
-            <h1 className="mx-auto max-w-[360px] font-dallas font-display text-3xl font-bold tracking-normal text-[#4C3D30] sm:text-6xl leading-[1]">
+            <h1 className="mx-auto sm:max-w-3xl max-w-[360px] font-dallas font-display text-3xl font-bold tracking-normal text-[#4C3D30] sm:text-6xl leading-[1]">
               BESPOKE DESIGNS MADE FROM A.I
             </h1>
           </div>
@@ -121,8 +121,8 @@ const Home: NextPage = () => {
               3 EASY STEPS TO
             </h1>
             <h1
-              className="mx-auto sm:max-w-4xl max-w-[300px] font-dallas font-display text-3xl font-bold tracking-normal text-[#99552A] sm:text-6xl"
-              style={{ WebkitTextStroke: '2px #99552A', color: "transparent" }}
+              className="mx-auto sm:max-w-4xl max-w-[300px] font-dallas font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl"
+              style={{ WebkitTextStroke: '1px #99552A', color: "transparent" }}
             >
               REDESIGN YOUR SPACE
             </h1>
@@ -143,12 +143,12 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className="py-4 sm:py-12 max-w-7xl">
+      <section className="py-4 w-full">
         <div className="mx-auto  px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
           <div className="mx-auto">
             <h1
               className="mx-auto max-w-4xl font-display text-4xl font-bold font-dallas tracking-normal text-[#99552A] sm:text-6xl"
-              style={{ WebkitTextStroke: '2px #99552A', color: "transparent" }}
+              style={{ WebkitTextStroke: '1px #99552A', color: "transparent" }}
             >
               #DESIGN SNAP
             </h1>
@@ -160,22 +160,22 @@ const Home: NextPage = () => {
         >
           <img
             src="/1.png"
-            className="sm:h-80 h-60 w-full"
+            className="h-60 w-full"
             alt="1 icon"
           />
           <img
             src="/2.png"
-            className="sm:h-80 h-60 w-full"
+            className="h-60 w-full"
             alt="1 icon"
           />
           <img
             src="/3.png"
-            className="sm:h-80 h-60 w-full"
+            className="h-60 w-full"
             alt="1 icon"
           />
           <img
             src="/4.png"
-            className="sm:h-80 h-60 w-full"
+            className="h-60 w-full"
             alt="1 icon"
           />
         </div>

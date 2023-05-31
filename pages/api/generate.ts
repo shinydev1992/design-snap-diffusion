@@ -99,7 +99,6 @@ export default async function handler(
     );
 
     let jsonStartResponse = await startResponse.json();
-    console.log(jsonStartResponse);
     let endpointUrl = jsonStartResponse.urls.get;
     const originalImage = jsonStartResponse.input.image;
     const roomId = jsonStartResponse.id;

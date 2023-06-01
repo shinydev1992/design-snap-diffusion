@@ -14,7 +14,9 @@ module.exports = {
         arimo: ["Arimo", "sans-serif"],
         dallas: ["Dallas", "sans-serif"],
         dallasBold: ["Dallas-Bold", "sans-serif"],
-        articulat: ["Articulat", "sans-serif"]
+        articulat: ["Articulat", "sans-serif"],
+        monument: ["Monument Regular", "sans-serif"],
+        monumentBold: ["Monument Bold", "sans-serif"]
       }
     },
   },

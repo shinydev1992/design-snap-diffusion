@@ -34,6 +34,16 @@
 }
 
 @font-face {
+  font-family: "Monument Regular";
+  src: url("./fonts/MonumentExtended-Regular.otf");
+}
+
+@font-face {
+  font-family: "Monument Bold";
+  src: url("./fonts/MonumentExtended-Ultrabold.otf");
+}
+
+@font-face {
   font-family: "Articulat";
   src: url("./fonts/ArticulatCF-Normal.ttf");
 }

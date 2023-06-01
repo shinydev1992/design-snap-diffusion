@@ -302,7 +302,7 @@ const Home: NextPage = () => {
             </div>
             <div className="col-span-3 lg:col-span-2 flex flex-col items-center">
               <h1
-                className="sm:block hidden mx-auto w-full sm:max-w-[980px] max-w-[360px] font-display text-5xl sm:text-6xl font-bold font-dallas py-2 sm:mt-8 mt-4"
+                className="sm:block hidden mx-auto w-full sm:max-w-[980px] max-w-[360px] font-display text-5xl font-bold font-dallas py-2 sm:mt-8 mt-4"
               >
                 REDESIGN YOUR ROOM NOW
               </h1>

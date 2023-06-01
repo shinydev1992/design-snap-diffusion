@@ -378,7 +378,7 @@ const Home: NextPage = () => {
                 )
               )}
               {!restoredImage && !loading && (
-                <div className="sm:p-8 p-0 mt-8 place-items-center w-[500px] h-[400px] rounded-2xl bg-[#CDC0B2]">
+                <div className="flex sm:p-8 p-0 mt-8 justify-center items-center sm:w-[500px] w-full h-[400px] rounded-2xl bg-[#CDC0B2]">
                   <Image
                     src="/logo.png"
                     width={32}

@@ -192,7 +192,7 @@ const Home: NextPage = () => {
                   {originalPhoto
                     ? (
                       <div className="flex flex-col w-full max-w-sm mt-8 bg-[#CDC0B2] rounded-xl px-3 py-3">
-                        <div className="flex justify-between mb-2">
+                        <div className="flex justify-between mb-2 ml-1 mr-1">
                           <div className="font-arimo">ORIGINAL ROOM</div>
                           <div onClick={() => setOriginalPhoto(null)}>
                             <svg

@@ -48,7 +48,7 @@ const Home: NextPage = () => {
     tags: [data?.remainingGenerations > 3 ? "paid" : "free"],
     styles: {
       colors: {
-        primary: "#C2B59B", // Primary buttons & links
+        primary: "#99552A", // Primary buttons & links
         error: "#d23f4d", // Error messages
         shade100: "#4C3D30", // Standard text
         shade200: "#4C3D30", // Secondary button text

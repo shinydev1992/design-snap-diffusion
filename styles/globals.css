@@ -29,6 +29,11 @@
 }
 
 @font-face {
+  font-family: "Dallas-Bold";
+  src: url("./fonts/Dallas-Bold.ttf");
+}
+
+@font-face {
   font-family: "Articulat";
   src: url("./fonts/ArticulatCF-Normal.ttf");
 }

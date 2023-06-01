@@ -71,7 +71,7 @@ export function Testimonials() {
           <h1 className="mx-auto max-w-5xl font-dallas font-display text-2xl font-bold tracking-normal text-[#4C3D30] sm:text-6xl">
             DESIGN ENTHUSIASTS AGREE
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-xs sm:text-lg text-[#4C3D30] leading-1">
+          <p className="mx-auto mt-4 max-w-xl text-xs sm:text-lg font-articulat font-bold text-[#4C3D30] leading-1 tracking-widest">
             See what thousands of customers are saying about design snap
           </p>
         </div>
@@ -85,11 +85,11 @@ export function Testimonials() {
               className="hover:scale-105 transition duration-300 ease-in-out "
             >
               <figure className="relative flex flex-col h-full justify-between rounded-3xl bg-white p-6 shadow-xl shadow-slate-900/10">
-                <blockquote className="flex flex-col gap-y-3">
-                  <p className="text-lg tracking-tight text-[#4C3D30]">
+                <blockquote className="flex flex-col gap-y-3 font-articulat font-bold tracking-widest">
+                  <p className="text-lg text-[#4C3D30]">
                     "{column.content}"
                   </p>
-                  <div className="font-display font-bold text-base text-[#4C3D30]">
+                  <div className="font-display text-base text-[#4C3D30]">
                     {column.author.name}
                   </div>
                 </blockquote>

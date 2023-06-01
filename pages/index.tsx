@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         >
           REDESIGN ROOMS<br/> IN SECONDS
         </h1>
-        <h2 className="mx-auto mt-4 sm:max-w-4xl max-w-xl font-articulat sm:text-lg text-xs text-[#4C3D30] leading-1">
+        <h2 className="mx-auto mt-4 sm:max-w-4xl max-w-xl font-articulat sm:text-lg text-xs text-[#4C3D30] leading-1 tracking-widest">
           Take a picture of a room & instantly re-design it.<br/>
           Design Snap the perfect inspiration for your next room
         </h2>
@@ -121,7 +121,7 @@ const Home: NextPage = () => {
               3 EASY STEPS TO
             </h1>
             <h1
-              className="mx-auto sm:max-w-5xl max-w-[300px] font-monument font-display text-3xl tracking-normal text-[#99552A] sm:text-6xl"
+              className="mx-auto sm:mt-4 mt-0 sm:max-w-5xl max-w-[300px] font-monument font-display text-3xl tracking-normal text-[#99552A] sm:text-6xl"
               style={{ WebkitTextStroke: '2px #99552A', color: "transparent" }}
             >
               REDESIGN YOUR SPACE
@@ -143,7 +143,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className="py-4 w-full">
+      <section className="sm:py-8 py-4 w-full">
         <div className="mx-auto  px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
           <div className="mx-auto">
             <h1
@@ -160,22 +160,22 @@ const Home: NextPage = () => {
         >
           <img
             src="/1.png"
-            className="h-60 w-full"
+            className="sm:h-90 h-60 w-full"
             alt="1 icon"
           />
           <img
             src="/2.png"
-            className="h-60 w-full"
+            className="sm:h-90 h-60 w-full"
             alt="1 icon"
           />
           <img
             src="/3.png"
-            className="h-60 w-full"
+            className="sm:h-90 h-60 w-full"
             alt="1 icon"
           />
           <img
             src="/4.png"
-            className="h-60 w-full"
+            className="sm:h-90 h-60 w-full"
             alt="1 icon"
           />
         </div>

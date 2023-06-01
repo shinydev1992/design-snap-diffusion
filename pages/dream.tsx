@@ -378,15 +378,13 @@ const Home: NextPage = () => {
                 )
               )}
               {!restoredImage && !loading && (
-                <div className="flex flex-col">
-                  <div className="sm:p-8 p-0 mt-8 place-items-center w-[500px] h-[400px] rounded-2xl bg-[#CDC0B2]">
-                    <Image
-                      src="/logo.png"
-                      width={32}
-                      height={32}
-                      alt="logo image"
-                    />
-                  </div>
+                <div className="sm:p-8 p-0 mt-8 place-items-center w-[500px] h-[400px] rounded-2xl bg-[#CDC0B2]">
+                  <Image
+                    src="/logo.png"
+                    width={32}
+                    height={32}
+                    alt="logo image"
+                  />
                 </div>
               )}
             </div>

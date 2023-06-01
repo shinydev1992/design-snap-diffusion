@@ -37,4 +37,9 @@ label.btn.btn--file.btn--primary.btn--upload {
   border-radius: 20px;
   font-weight: 600;
   background-color: #CDC0B2;
+  border-color: #CDC0B2;
+}
+
+a.uploader__submitted-file__action {
+  color: #4C3D30;
 }

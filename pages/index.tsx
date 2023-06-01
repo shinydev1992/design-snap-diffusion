@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         >
           REDESIGN ROOMS<br/> IN SECONDS
         </h1>
-        <h2 className="mx-auto mt-4 sm:max-w-4xl max-w-xl font-articulat sm:text-lg text-xs text-[#4C3D30] leading-1 tracking-widest">
+        <h2 className="mx-auto mt-4 sm:max-w-4xl max-w-xl font-articulat font-bold sm:text-lg text-xs text-[#4C3D30] leading-1 tracking-widest">
           Take a picture of a room & instantly re-design it.<br/>
           Design Snap the perfect inspiration for your next room
         </h2>
@@ -160,22 +160,22 @@ const Home: NextPage = () => {
         >
           <img
             src="/1.png"
-            className="sm:h-90 h-60 w-full"
+            className="sm:h-120 h-60 w-full"
             alt="1 icon"
           />
           <img
             src="/2.png"
-            className="sm:h-90 h-60 w-full"
+            className="sm:h-120 h-60 w-full"
             alt="1 icon"
           />
           <img
             src="/3.png"
-            className="sm:h-90 h-60 w-full"
+            className="sm:h-120 sm:min-h-[30rem] h-60 w-full"
             alt="1 icon"
           />
           <img
             src="/4.png"
-            className="sm:h-90 h-60 w-full"
+            className="sm:h-120 h-60 w-full"
             alt="1 icon"
           />
         </div>

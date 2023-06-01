@@ -71,7 +71,7 @@ export function Testimonials() {
           <h1 className="mx-auto max-w-5xl font-dallas font-display text-2xl font-bold tracking-normal text-[#4C3D30] sm:text-6xl">
             DESIGN ENTHUSIASTS AGREE
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-xs sm:text-lg font-articulat font-bold text-[#4C3D30] leading-1 tracking-widest">
+          <p className="mx-auto mt-4 max-w-4xl text-xs sm:text-lg font-articulat font-bold text-[#4C3D30] leading-1 tracking-widest">
             See what thousands of customers are saying about design snap
           </p>
         </div>
@@ -89,7 +89,7 @@ export function Testimonials() {
                   <p className="text-lg text-[#4C3D30]">
                     "{column.content}"
                   </p>
-                  <div className="font-display text-base text-[#4C3D30]">
+                  <div className="font-display text-xl text-[#4C3D30]">
                     {column.author.name}
                   </div>
                 </blockquote>

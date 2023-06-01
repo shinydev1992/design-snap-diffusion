@@ -377,6 +377,20 @@ const Home: NextPage = () => {
                   </div>
                 )
               )}
+              {!restoredImage && (
+                <div className="flex flex-col">
+                  <div className="sm:p-8 p-0 sm:mt-0 mt-8 place-items-center w-full grid grid-cols-1 gap-10 lg:grid-cols-1 lg:grid-rows-1">
+                    <Image
+                      alt="restored photo"
+                      src="/no_image.png"
+                      className="rounded-2xl relative sm:mt-0 mt-2 cursor-zoom-in object-fill"
+                      width={500}
+                      height={400}
+                      onLoadingComplete={() => setRestoredLoaded(true)}
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         ) : (

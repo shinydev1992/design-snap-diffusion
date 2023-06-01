@@ -160,22 +160,22 @@ const Home: NextPage = () => {
         >
           <img
             src="/1.png"
-            className="sm:min-h-[20rem] h-50 w-full"
+            className="h-50 w-full"
             alt="1 icon"
           />
           <img
             src="/2.png"
-            className="sm:min-h-[20rem] h-50 w-full"
+            className="h-50 w-full"
             alt="1 icon"
           />
           <img
             src="/3.png"
-            className="sm:min-h-[20rem] h-50 w-full"
+            className="h-50 w-full"
             alt="1 icon"
           />
           <img
             src="/4.png"
-            className="sm:min-h-[20rem] h-50 w-full"
+            className="h-50 w-full"
             alt="1 icon"
           />
         </div>

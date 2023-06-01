@@ -121,8 +121,8 @@ const Home: NextPage = () => {
               3 EASY STEPS TO
             </h1>
             <h1
-              className="mx-auto sm:max-w-4xl max-w-[300px] font-dallas font-display text-4xl font-bold tracking-normal text-[#99552A] sm:text-6xl"
-              style={{ WebkitTextStroke: '1px #99552A', color: "transparent" }}
+              className="mx-auto sm:max-w-4xl max-w-[300px] font-dallas font-display text-4xl tracking-normal text-[#99552A] sm:text-6xl"
+              style={{ WebkitTextStroke: '1px #99552A', color: "transparent", fontWeight: '1000' }}
             >
               REDESIGN YOUR SPACE
             </h1>
@@ -147,8 +147,8 @@ const Home: NextPage = () => {
         <div className="mx-auto  px-4 sm:px-6 lg:px-8 md:px-7 flex flex-col items-center justify-center text-center">
           <div className="mx-auto">
             <h1
-              className="mx-auto max-w-4xl font-display text-4xl font-bold font-dallas tracking-normal text-[#99552A] sm:text-6xl"
-              style={{ WebkitTextStroke: '1px #99552A', color: "transparent" }}
+              className="mx-auto max-w-4xl font-display text-4xl font-dallas tracking-normal text-[#99552A] sm:text-6xl"
+              style={{ WebkitTextStroke: '1px #99552A', color: "transparent", fontWeight: '1000' }}
             >
               #DESIGN SNAP
             </h1>

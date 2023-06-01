@@ -353,7 +353,7 @@ const Home: NextPage = () => {
                     <div className="grid grid-cols-2 w-full gap-4 font-arimo font-semibold mt-4">
                       <button
                         className={`rounded-full w-full ${data?.remainingGenerations > 0 ? "bg-[#99552A]" : "bg-[#897465]"} text-[#F5F5F5] lg:text-lg md:text-md text-xs sm:px-8 px-2 py-4 sm:tracking-widest tracking-normal`}
-                        disabled={data?.remainingGenerations > 0 ? true : false}
+                        disabled={data?.remainingGenerations > 0 ? false : true}
                         onClick={() => {
                           if (originalPhoto) {
                             generatePhoto(originalPhoto.replace("raw", "thumbnail"));

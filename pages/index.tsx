@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         >
           REDESIGN ROOMS<br/> IN SECONDS
         </h1>
-        <h2 className="mx-auto mt-4 sm:max-w-4xl max-w-xl sm:text-lg text-xs text-[#4C3D30] leading-1">
+        <h2 className="mx-auto mt-4 sm:max-w-4xl max-w-xl font-articulat sm:text-lg text-xs text-[#4C3D30] leading-1">
           Take a picture of a room & instantly re-design it.<br/>
           Design Snap the perfect inspiration for your next room
         </h2>

@@ -405,7 +405,7 @@ const Home: NextPage = () => {
                     REDESIGN YOUR ROOM IN A SNAP
                   </h1>
                   <div className="text-sm sm:text-md">
-                    <div className="sm:max-w-[440px] max-w-[400px] font-bold font-arimo tracking-widest">
+                    <div className="sm:max-w-[520px] max-w-[400px] font-bold font-arimo sm:text-lg text-xs tracking-widest">
                       <p className="leading-[1]">
                         SIGN IN BELOW TO CREATE A FREE ACCOUNT &
                         REDESIGN YOUR ROOM TODAY

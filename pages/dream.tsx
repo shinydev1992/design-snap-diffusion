@@ -34,7 +34,7 @@ const Home: NextPage = () => {
   const [restoredLoaded, setRestoredLoaded] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [photoName, setPhotoName] = useState<string | null>(null);
-  const [theme, setTheme] = useState<String>("Modern");
+  const [theme, setTheme] = useState<string>("Modern");
   const [room, setRoom] = useState<roomType>("Living Room");
 
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
@@ -396,7 +396,7 @@ const Home: NextPage = () => {
                       alt="logo image"
                     />
                   </div>
-                  <p>{`${theme.toLowerCase()} ${room.toLowerCase()}`}</p>
+                  <p>{`${theme.charAt(0).toUpperCase() + theme.slice(1)} ${room.toLowerCase()}`}</p>
                 </div>
               )}
             </div>

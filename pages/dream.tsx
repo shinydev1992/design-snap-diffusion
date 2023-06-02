@@ -396,7 +396,7 @@ const Home: NextPage = () => {
                       alt="logo image"
                     />
                   </div>
-                  <p>{`a ${theme.toLowerCase()} ${room.toLowerCase()}`}</p>
+                  <p>{`${theme.toLowerCase()} ${room.toLowerCase()}`}</p>
                 </div>
               )}
             </div>

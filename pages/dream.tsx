@@ -218,7 +218,11 @@ const Home: NextPage = () => {
                         />
                       </div>
                     )
-                  : <UploadDropZone />}
+                  : (
+                    <div className="w-full relative min-w-[280px] max-w-[670px] h-[250px]">
+                      <UploadDropZone />
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="w-full max-w-sm mt-6">
@@ -338,7 +342,7 @@ const Home: NextPage = () => {
                       </svg>
                       <span className="sr-only">Loading...</span>
                     </div>
-                </div>
+                  </div>
                 </div>
               ) : (
                 restoredImage && originalPhoto && (
@@ -383,13 +387,14 @@ const Home: NextPage = () => {
                 )
               )}
               {!restoredImage && !loading && (
-                <div className="flex sm:p-8 p-0 mt-8 justify-center items-center sm:w-[500px] w-full h-[400px] rounded-2xl bg-[#CDC0B2]">
+                <div className="flex sm:p-8 p-0 mt-8 justify-center items-center sm:w-[402px] w-full h-[312px] rounded-2xl bg-[#CDC0B2]">
                   <Image
                     src="/logo.png"
                     width={32}
                     height={32}
                     alt="logo image"
                   />
+                  <p>{`a ${theme.toLowerCase()} ${room.toLowerCase()}`}</p>
                 </div>
               )}
             </div>

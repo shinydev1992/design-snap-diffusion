@@ -1,8 +1,8 @@
-# [roomGPT.io](https://roomGPT.io)
+# [Design Snap](https://thedesignsnap.com)
 
-roomGPT helps design rooms in seconds using AI.
+Design Snap helps design rooms in seconds using AI.
 
-[![Room GPT](./public/screenshot.png)](https://roomGPT.io)
+[![Design Snap](./public/screenshot.png)](https://thedesignsnap.com)
 
 ## How it works
 
@@ -13,7 +13,7 @@ It uses an ML model called [ControlNet](https://github.com/lllyasviel/ControlNet
 ### Cloning the repository the local machine.
 
 ```bash
-git clone https://github.com/Nutlope/roomGPT
+git clone https://github.com/shinydev1992/design-snap-diffusion
 ```
 
 ### Creating a account on Replicate to get an API key.
@@ -52,11 +52,3 @@ npm run dev
 6. Publish app
 7. Create credentials -> Oauth client ID
 8. Run npx prisma db push && prisma migrate dev && prisma generate
-
-## One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-> Note: You will need to configure auth by following the setup above by using Neon and next-auth and Stripe for payments in order to deploy with Vercel.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nutlope/roomGPT&env=REPLICATE_API_KEY,NEXTAUTH_SECRET,GOOGLE_CLIENT_ID,GOOGLE_CLIENT_SECRET,DATABASE_URL,SHADOW_DATABASE_URL,NEXTAUTH_URL&project-name=room-GPT&repo-name=roomGPT)

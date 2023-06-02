@@ -387,13 +387,15 @@ const Home: NextPage = () => {
                 )
               )}
               {!restoredImage && !loading && (
-                <div className="flex sm:p-8 p-0 mt-8 justify-center items-center sm:w-[402px] w-full h-[312px] rounded-2xl bg-[#CDC0B2]">
-                  <Image
-                    src="/logo.png"
-                    width={32}
-                    height={32}
-                    alt="logo image"
-                  />
+                <div>
+                  <div className="flex sm:p-8 p-0 mt-8 justify-center items-center sm:w-[402px] w-full h-[312px] rounded-2xl bg-[#CDC0B2]">
+                    <Image
+                      src="/logo.png"
+                      width={32}
+                      height={32}
+                      alt="logo image"
+                    />
+                  </div>
                   <p>{`a ${theme.toLowerCase()} ${room.toLowerCase()}`}</p>
                 </div>
               )}

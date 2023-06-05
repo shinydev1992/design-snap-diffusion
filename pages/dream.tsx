@@ -423,7 +423,7 @@ const Home: NextPage = () => {
                     </div>
                   </div>
                   <div className="flex flex-col space-y-2">
-                    <button
+                    {/*<button
                       onClick={() => signIn("google")}
                       className="bg-[#CDC0B2] font-semibold py-3 px-6 rounded-xl flex items-center space-x-2"
                     >
@@ -434,7 +434,7 @@ const Home: NextPage = () => {
                         alt="facebook's logo"
                       />
                       <span>Sign in with Facebook</span>
-                    </button>
+                    </button> */}
                     <button
                       onClick={() => signIn("google")}
                       className="bg-[#CDC0B2] font-semibold py-3 px-6 rounded-xl flex items-center space-x-2"
@@ -447,7 +447,7 @@ const Home: NextPage = () => {
                       />
                       <span>Sign in with Google</span>
                     </button>
-                    <button
+                    {/* <button
                       onClick={() => signIn("google")}
                       className="bg-[#CDC0B2] font-semibold py-3 px-6 rounded-xl flex items-center space-x-2"
                     >
@@ -458,7 +458,7 @@ const Home: NextPage = () => {
                         alt="apple's logo"
                       />
                       <span>Sign in with Apple</span>
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </motion.div>

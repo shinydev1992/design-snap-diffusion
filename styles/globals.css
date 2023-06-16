@@ -48,6 +48,11 @@
   src: url("./fonts/ArticulatCF-Normal.ttf");
 }
 
+@font-face {
+  font-family: "Code Bold";
+  src: url("./fonts/code_bold.otf");
+}
+
 label.btn.btn--file.btn--primary.btn--upload {
   border-radius: 20px;
   font-weight: 600;

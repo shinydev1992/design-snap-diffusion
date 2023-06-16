@@ -1,58 +1,59 @@
 const testimonials = [
   {
-    content: "So good! I need this right now. Congrats on the launch!",
-    link: "https://twitter.com/eveporcello/status/1631438728999899136",
+    content: "My house has never been so put together, loved the variations and choices.",
+    link: "",
     author: {
-      name: "Eve Porcello",
+      name: "Jenny Jacobs",
       role: "Engineer & Author",
       image: "/eve.jpg",
     },
   },
   {
     content:
-      "Finally! Something to help me get over my indecisiveness when decorating my house!",
-    link: "https://twitter.com/arthur_dvorkin/status/1631402865209274369",
+      "This cutting-edge tool transformed my living room from drab to fab, understanding & tailoring to my tastes effortlessly.",
+    link: "",
     author: {
-      name: "Arthur Dvorkin",
+      name: "Todd M.",
       role: "Engineer",
       image: "/arthur.jpg",
     },
   },
   {
     content:
-      "This is incredible, you don't need an interior designer anymore.",
-    link: "https://www.tiktok.com/@thenubians/video/7206088336044313861?q=roomgpt.io&t=1677909079689",
+      "The bedroom redesign options offered were not only stylish but also perfectly in tune with my personal style.",
+    link: "",
     author: {
-      name: "Ade Dada",
+      name: "Carolyn Hargrave",
       role: "Startup Founder",
       image: "/ade.jpeg",
     },
   },
   {
     content:
-      "I haven't changed my room layout for 5 years, but this app may change that. Great job.",
-    link: "https://twitter.com/RobAttfield/status/1631545265281974273",
+      "Never thought my eclectic style could be improved, love the designs!",
+    link: "",
     author: {
-      name: "Rob Attfield",
+      name: "Evelyn Bell",
       role: "Software Engineer",
       image: "/rob.jpg",
     },
   },
   {
     content:
-      "This is fantastic. I've already decided on a new wall color from a generated image and repainting it is now my weekend project.",
-    link: "https://twitter.com/Music4UsAll/status/1631622608595607552",
+      "This is a game changer for the world of interior design.",
+    link: "",
     author: {
-      name: "Music",
+      name: "Tanya K.",
       role: "Some dude on the internet",
       image: "/music.jpg",
     },
   },
   {
-    content: "🤯",
-    link: "https://twitter.com/github/status/1631821360619028482",
+    content:
+      "Breathed new life into my old study, creating a space I now truly love.",
+    link: "",
     author: {
-      name: "GitHub",
+      name: "Gideon Mathews",
       role: "The one and only",
       image: "/github.jpg",
     },
@@ -84,7 +85,7 @@ export function Testimonials() {
               key={columnIndex}
               className="hover:scale-105 transition duration-300 ease-in-out "
             >
-              <figure className="relative flex flex-col h-full justify-between rounded-3xl bg-white p-6 shadow-xl shadow-slate-900/10">
+              <figure className="relative flex flex-col h-[260px] justify-between rounded-3xl bg-white p-6 shadow-xl shadow-slate-900/10">
                 <blockquote className="flex flex-col gap-y-3 font-articulat font-bold tracking-widest">
                   <p className="text-lg text-[#4C3D30]">
                     "{column.content}"

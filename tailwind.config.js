@@ -16,7 +16,8 @@ module.exports = {
         dallasBold: ["Dallas-Bold", "sans-serif"],
         articulat: ["Articulat", "sans-serif"],
         monument: ["Monument Regular", "sans-serif"],
-        monumentBold: ["Monument Bold", "sans-serif"]
+        monumentBold: ["Monument Bold", "sans-serif"],
+        codeBold: ["Code Bold", "sans-serif"],
       }
     },
   },

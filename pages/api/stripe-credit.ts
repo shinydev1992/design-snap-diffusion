@@ -34,13 +34,13 @@ export default async function handler(req: NextApiRequest,
 
     switch (req.body.type) {
       case '1':
-        priceID = 'price_1ND7UWJGPdLJRKnTf2FHNxL0';
+        priceID = 'price_1NKr6tJGPdLJRKnTRpzWFjPE';
         break;
       case '2':
-        priceID = 'price_1ND7UWJGPdLJRKnTrZ0TtUlO';
+        priceID = 'price_1NKr6tJGPdLJRKnTjvGbrwnB';
         break;
       case '3':
-        priceID = 'price_1ND7UWJGPdLJRKnTfUeLTDtL';
+        priceID = 'price_1NKr6tJGPdLJRKnT1oV2OMa3';
         break;
     }
 

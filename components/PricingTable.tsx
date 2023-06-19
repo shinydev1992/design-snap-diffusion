@@ -16,7 +16,7 @@ export default function PricingTable({ price, credit, tag }: PricingProps) {
       let resdata = await res.json();
       return window.location = resdata.data;
     }).catch((err) => {
-      
+      console.log(err);
     });
   }
   return (

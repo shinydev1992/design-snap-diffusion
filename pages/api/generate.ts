@@ -119,6 +119,7 @@ export default async function handler(
       if (jsonFinalResponse.status === "succeeded") {
         generatedImage = jsonFinalResponse.output[1] as string;
       } else if (jsonFinalResponse.status === "failed") {
+        console.log(jsonFinalResponse);
         break;
       } else {
         await new Promise((resolve) => setTimeout(resolve, 1000));

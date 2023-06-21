@@ -241,7 +241,7 @@ const Home: NextPage = () => {
               <div className="w-full max-w-sm mt-6">
                 <div className="items-center mb-4">
                   <p className="font-semibold font-arimo sm:text-md text-sm">
-                    STEP #3: SELECT ROOM THEME (UP TO 4)
+                    STEP #3: SELECT ROOM THEME
                   </p>
                 </div>
                 <div className="grid grid-cols-3 gap-2">

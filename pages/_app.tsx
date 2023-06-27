@@ -2,12 +2,13 @@ import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
 import "../styles/globals.css";
 import Script from "next/script";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 import { SessionProvider } from "next-auth/react";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <>
-    <Script  
+    {/* <Script  
       strategy="lazyOnload"
       async src="https://www.googletagmanager.com/gtag/js?id=G-08KF99X4ZE"></Script>
       <Script strategy="lazyOnload">
@@ -19,8 +20,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                     page_path: window.location.pathname,
                     });
                 `}
-      </Script>
+      </Script> */}
     <SessionProvider session={session}>
+      <GoogleAnalytics />
       <Component {...pageProps} />
       <Analytics mode={'production'}/>
     </SessionProvider>

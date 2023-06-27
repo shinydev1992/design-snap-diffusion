@@ -18,9 +18,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-08KF99X4ZE', {
-          page_path: window.location.pathname,
-          });
+          gtag('config', 'G-08KF99X4ZE');
         `}
       </Script>
       {/* <GoogleAnalytics /> */}

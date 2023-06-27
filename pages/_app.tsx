@@ -7,8 +7,10 @@ import { SessionProvider } from "next-auth/react";
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <>
-    <Script async src="https://www.googletagmanager.com/gtag/js?id=G-08KF99X4ZE"></Script>
-      <Script>
+    <Script  
+      strategy="lazyOnload"
+      async src="https://www.googletagmanager.com/gtag/js?id=G-08KF99X4ZE"></Script>
+      <Script strategy="lazyOnload">
       {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}

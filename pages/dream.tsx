@@ -436,7 +436,9 @@ const Home: NextPage = () => {
                       <span>Sign in with Facebook</span>
                     </button> */}
                     <button
-                      onClick={() => signIn("google")}
+                      onClick={() => {signIn("google")
+                    
+                    }}
                       className="bg-[#CDC0B2] font-semibold py-3 px-6 rounded-xl flex items-center space-x-2"
                     >
                       <Image

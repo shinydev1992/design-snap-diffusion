@@ -3,12 +3,27 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="w-full h-[72px] flex flex-col sm:flex-row justify-center items-center relative mt-4">
-      <div
-        className="font-semibold flex color-[#4C3D30] font-arimo uppercase tracking-widest" 
-      >
-        <p>Powered by THEDESIGNSNAP</p>
-      </div>
+     
+        <div
+          className="font-semibold flex color-[#4C3D30] font-arimo uppercase tracking-widest" 
+        >
+          <p>Powered by THEDESIGNSNAP</p>
+        </div>
+     
+   
       <div className="flex space-x-1 static sm:absolute right-4">
+      <div
+          className="font-semibold flex color-[#4C3D30] font-arimo uppercase tracking-widest" 
+        >
+          <Link
+            href="/terms"
+            className="group"
+            aria-label="TaxPal on Twitter"
+          >
+          <p className="underline underline-offset-1">Terms of service</p>
+          </Link>
+        </div>
+        <div className="flex space-x-1 static ">
         <Link
           href=""
           className="group"
@@ -52,6 +67,7 @@ export default function Footer() {
             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
           </svg>
         </Link>
+        </div>
       </div>
     </footer>
   );

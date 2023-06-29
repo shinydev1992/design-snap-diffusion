@@ -14,14 +14,14 @@ const Terms: NextPage =() =>{
                     email={session?.user?.email || undefined}
                 />
                 <div className="min-[1024px]:p-[5rem] min-[768px]:p-[2rem] min-[375px]:p-[1rem] min-[320px]:p-[1rem]">
-                <p className="min-[768px]:text-[#AE6A2B] text-[2rem] max-[1024px]:text-[2rem] max-[768px]:text-[1.5rem] text-[#000000] max-[375px]:text-[1.2rem] max-[320px]:text-[1.2rem]">TERMS OF SERVICE</p>
-                <div className="divide-[#AE6A2B] divide-y pt-[1rem] max-[1024px]:divide-[#AE6A2B] max-[768px]:tdivide-[#AE6A2B] max-[375px]:divide-[#000000] max-[320px]:divide-[#000000]">
+                <h1 className="tracking-widest min-[768px]:text-[#000000] font-articulat font-bold text-[2rem] max-[1024px]:text-[2rem] max-[768px]:text-[1.5rem] text-[#000000] max-[375px]:text-[1.2rem] max-[320px]:text-[1.2rem] ">Terms of Service</h1>
+                <div className="divide-[#000000] divide-y pt-[1rem] max-[1024px]:divide-[#000000] max-[768px]:tdivide-[#000000] max-[375px]:divide-[#000000] max-[320px]:divide-[#000000]">
                         <div></div>
                         <div></div>
                 </div>
                 <div className="pt-[1rem]">
-                    <p className="font-bold text-[1.5rem] max-[1024px]:text-[1.3rem] max-[768px]:text-[1.3rem] max-[375px]:text-[1.2rem] max-[320px]:text-[1.2rem]">OVERVIEW</p>
-                    <span className="text-[1.3rem] font-articulat max-[1024px]:text-[1.3rem] max-[768px]:text-[1.3rem] max-[375px]:text-[1rem] max-[320px]:text-[1rem]" >
+                    <p className="tracking-widest font-bold text-[1.5rem] text-[#000000] font-articulat max-[1024px]:text-[1.3rem] max-[768px]:text-[1.3rem] max-[375px]:text-[1.2rem] max-[320px]:text-[1.2rem]">OVERVIEW</p>
+                    <span className=" tracking-wide text-[1.3rem] text-[#000000]  font-articulat max-[1024px]:text-[1.3rem] max-[768px]:text-[1.3rem] max-[375px]:text-[1rem] max-[320px]:text-[1rem]" >
                         Last updated: 22 June 2023
                         <br/> <br/>
                         Welcome to The Design Snap by The Design Snap, Inc. 

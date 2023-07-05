@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, calcLength, motion } from "framer-motion";
 import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -27,6 +27,13 @@ const uploader = Uploader({
     : "free",
 });
 
+
+type WindowWithDataLayer = Window & {
+  dataLayer: Record<string, any>[];
+}
+
+declare const window: WindowWithDataLayer;
+
 const Home: NextPage = () => {
   const [originalPhoto, setOriginalPhoto] = useState<string | null>(null);
   const [restoredImage, setRestoredImage] = useState<string | null>(null);
@@ -40,7 +47,10 @@ const Home: NextPage = () => {
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
   const { data, mutate } = useSWR("/api/remaining", fetcher);
   const { data: session, status } = useSession();
-  const dataLayer = [];
+
+  
+
+
   const options = {
     maxFileCount: 1,
     mimeTypes: ["image/jpeg", "image/png", "image/jpg"],
@@ -113,11 +123,12 @@ const Home: NextPage = () => {
         }
       }}
       onComplete={(file)=>{
-        dataLayer.push({
+        console.log('Hello')
+        window.dataLayer.push({
           event: 'File_Upload',
           files: 1,
           user: session?.user?.email
-      });
+        });
       }}
       minWidth="400px"
       height="250px"

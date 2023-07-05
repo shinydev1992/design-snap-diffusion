@@ -40,7 +40,7 @@ const Home: NextPage = () => {
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
   const { data, mutate } = useSWR("/api/remaining", fetcher);
   const { data: session, status } = useSession();
-
+  const dataLayer = [];
   const options = {
     maxFileCount: 1,
     mimeTypes: ["image/jpeg", "image/png", "image/jpg"],
@@ -111,6 +111,13 @@ const Home: NextPage = () => {
           setPhotoName(file[0].originalFile.originalFileName);
           setOriginalPhoto(file[0].fileUrl.replace("raw", "thumbnail"));
         }
+      }}
+      onComplete={(file)=>{
+        dataLayer.push({
+          event: 'File_Upload',
+          files: 1,
+          user: session?.user?.email
+      });
       }}
       minWidth="400px"
       height="250px"

@@ -120,15 +120,21 @@ const Home: NextPage = () => {
         if (file.length !== 0) {
           setPhotoName(file[0].originalFile.originalFileName);
           setOriginalPhoto(file[0].fileUrl.replace("raw", "thumbnail"));
+          console.log('Hello')
+          window.dataLayer.push({
+            event: 'File_Upload',
+            files: 1,
+            user: session?.user?.email
+          });
         }
       }}
-      onComplete={(file)=>{
-        console.log('Hello')
-        window.dataLayer.push({
-          event: 'File_Upload',
-          files: 1,
-          user: session?.user?.email
-        });
+      onComplete={(file) => {
+        // console.log('Hello')
+        // window.dataLayer.push({
+        //   event: 'File_Upload',
+        //   files: 1,
+        //   user: session?.user?.email
+        // });
       }}
       minWidth="400px"
       height="250px"

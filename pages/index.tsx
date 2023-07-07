@@ -6,9 +6,22 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Testimonials } from "../components/Testimonials";
 import { useSession } from "next-auth/react";
+import { useEffect } from "react";
+
+type WindowWithDataLayer = Window & {
+  dataLayer: Record<string, any>[];
+}
+
+declare const window: WindowWithDataLayer;
 
 const Home: NextPage = () => {
   const { data: session, status } = useSession();
+  useEffect(()=>{
+      window.dataLayer.push({
+            event: 'site_visits',
+            site_visit_count: 1,
+          });
+  },[])
 
   return (
     <div className="flex mx-auto flex-col items-center justify-center min-h-screen">

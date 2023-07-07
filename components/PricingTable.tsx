@@ -4,8 +4,40 @@ interface PricingProps {
   tag: Boolean;
 }
 
+type WindowWithDataLayer = Window & {
+  dataLayer: Record<string, any>[];
+}
+
+declare const window: WindowWithDataLayer;
+
+
 export default function PricingTable({ price, credit, tag }: PricingProps) {
   const buyCredit = async (data: any) => {
+    switch (data) {
+      case '1':
+        window.dataLayer.push({
+          event: 'buy_credits',
+          buy_credit_amount: 10,
+          buy_credits:1
+        });
+        break;
+      case '2':
+        window.dataLayer.push({
+          event: 'buy_credits',
+          buy_credit_amount: 40,
+          buy_credits:1
+        });
+        break;
+      case '3':
+        window.dataLayer.push({
+          event: 'buy_credits',
+          buy_credit_amount: 120,
+          buy_credits:1
+        });
+        break;
+      default:
+        break;
+    }
     fetch("/api/stripe-credit", {
       method: "POST",
       headers: {
@@ -44,6 +76,7 @@ export default function PricingTable({ price, credit, tag }: PricingProps) {
           <button
             className="sm:bg-[#4C3D30] bg-[#99552A] rounded-full text-white text-lg font-arimo uppercase w-full px-8 py-2 mt-4"
             onClick={() => {
+              
               price === '10' ? buyCredit('1') : buyCredit('3');
             }}
           >

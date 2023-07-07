@@ -4,6 +4,13 @@ import Stripe from "stripe";
 import { buffer } from "micro";
 import Cors from "micro-cors";
 
+type WindowWithDataLayer = Window & {
+  dataLayer: Record<string, any>[];
+}
+
+declare const window: WindowWithDataLayer;
+
+
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2022-11-15",
 });
@@ -13,6 +20,8 @@ export const config = {
     bodyParser: false,
   },
 };
+
+
 
 const webhookSecret: string = process.env.STRIPE_WEBHOOK_SECRET || "";
 
@@ -62,12 +71,27 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       switch (paymentIntent.amount_subtotal) {
         case 1000:
           creditAmount = 10;
+          // window.dataLayer.push({
+          //   event: 'buy_credits',
+          //   buy_credit_amount: 10,
+          //   buy_credits:1
+          // });
           break;
         case 2000:
           creditAmount = 40;
+          // window.dataLayer.push({
+          //   event: 'buy_credits',
+          //   buy_credit_amount: 40,
+          //   buy_credits:1
+          // });
           break;
         case 4900:
           creditAmount = 120;
+          // window.dataLayer.push({
+          //   event: 'buy_credits',
+          //   buy_credit_amount: 120,
+          //   buy_credits:1
+          // });
           break;
       }
       await prisma.user.update({

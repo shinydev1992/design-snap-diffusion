@@ -142,6 +142,16 @@ const Home: NextPage = () => {
   );
 
   async function generatePhoto(fileUrl: string) {
+    window.dataLayer.push({
+      event:'room_type',
+      room_type:room,
+      room_type_count:1
+    })
+    window.dataLayer.push({
+      event:'room_theme',
+      room_theme:theme,
+      room_theme_count:1
+    })
     await new Promise((resolve) => setTimeout(resolve, 200));
     setLoading(true);
     const res = await fetch("/api/generate", {
@@ -389,6 +399,7 @@ const Home: NextPage = () => {
                         disabled={data?.remainingGenerations > 0 ? false : true}
                         onClick={() => {
                           if (originalPhoto) {
+                            
                             generatePhoto(originalPhoto.replace("raw", "thumbnail"));
                           }
                         }}

@@ -6,6 +6,12 @@ import Head from "next/head";
 import useSWR from "swr";
 import Image from "next/image";
 
+type WindowWithDataLayer = Window & {
+  dataLayer: Record<string, any>[];
+}
+
+declare const window: WindowWithDataLayer;
+
 export default function Pricing() {
   const { data: session } = useSession();
 
